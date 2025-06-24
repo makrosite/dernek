@@ -53,33 +53,29 @@
                             <!-- Menu Structure-->
                             <div class="back-inner-menus">
                                 <ul id="backmenu" class="back-menus back-sub-shadow">
-                                    <li> <a href="{{route('anasayfa')}}">Anasayfa</a>
+                                    <li> <a href="">Anasayfa</a>
                                         <ul>
                                             <li><a href="index.html">Home One</a></li>
                                             <li><a href="index-two.html">Home Two</a></li>
                                         </ul>
                                     </li>
 
-                                    <li> <a href="#">Pages</a>
+                                    <li> <a href="#">Kurumsal</a>
                                         <ul>
-                                            <li> <a href="about.html">About</a></li>
-                                            <li> <a href="service.html">Services</a>
-                                                <ul>
-                                                    <li><a href="service.html">Service</a></li>
-                                                    <li><a href="service-details.html">Service Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li> <a href="faq.html">FAQ</a></li>
-                                            <li> <a href="404.html">Error 404</a></li>
+                                            <li> <a href="about.html">Hakkımızda</a></li>
+                                            <li> <a href="service.html">Yönetim Kurulu</a>
+                                            <li><a href="service.html">Başkanın Mesajları</a></li>
+                                            <li><a href="service-details.html"></a>Tarihçe</li>
+                                            <li><a href="service-details.html"></a>İş Birlikleri & İşritakler</li>
                                         </ul>
                                     </li>
-                                    <li> <a href="portfolio.html">Portfolio</a>
+                                    <li> <a href="portfolio.html">Üyelerimiz</a>
                                         <ul>
                                             <li><a href="portfolio.html">Portfolio</a></li>
                                             <li><a href="portfolio-details.html">Portfolio Details</a></li>
                                         </ul>
                                     </li>
-                                    <li class="mega-inner"> <a href="#">Elements</a>
+                                    <li class="mega-inner"> <a href="#">Haberler</a>
                                         <ul class="mega-menu">
                                             <li>
                                                 <div class="mega-menu-container">
@@ -131,7 +127,7 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li> <a href="blog.html">Blog</a>
+                                    <li> <a href="blog.html">İletişim</a>
                                         <ul>
                                             <li><a href="blog.html">Blog</a>
                                                 <ul>
@@ -160,7 +156,7 @@
                                             <li><a href="my-account.html">My Account</a></li>
                                         </ul>
                                     </li>
-                                    <li> <a href="{{Route('kurumsal')}}">Hakkımızda</a></li>
+                                    <li> <a href="">Hakkımızda</a></li>
                                 </ul>
 
                                 <div class="searchbar-part">
