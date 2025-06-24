@@ -4,12 +4,12 @@ Kurumsal
 	Yönetim Kurulu
 	Başkanın Mesajları
 	Tarihçe
-İş Birlikleri & İşritakler
+	İş Birlikleri
 
 Üyelerimiz
 Haberler
-Duyurular
-Etkinlikler
-Teşvik ve Hibeler
-Sosyal Sorumluluk
+	Duyurular
+	Etkinlikler
+	Teşvik ve Hibeler
+	Sosyal Sorumluluk
 İletişim
