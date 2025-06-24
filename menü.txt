@@ -1,17 +1,15 @@
-Frontend  menü yapısı 
 Anasayfa
 Kurumsal
 	Hakkımızda
 	Yönetim Kurulu
 	Başkanın Mesajları
 	Tarihçe
+İş Birlikleri & İşritakler
+
 Üyelerimiz
 Haberler
 Duyurular
 Etkinlikler
 Teşvik ve Hibeler
 Sosyal Sorumluluk
-İş Birlikleri & İşritakler
-Üyelik
-Bağış Yap
 İletişim
