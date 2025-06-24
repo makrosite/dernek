@@ -7,93 +7,94 @@
             <div class="back-wrapper-inner">
 
                 <!-- Slider Start -->
-                <div class="home-slider-part owl-carousel">
-                    <div class="single-slide">
-                        <div class="slider-img">
-                            <img class="desktop" src="assets/images/slider/home-slider11.png" alt="Slider Image 1">
-                            <img class="mobile" src="assets/images/slider/home-slider11-mobile.jpg" alt="Slider Image 1">
+               @include('inc.slider')
+               @include('inc.kayan-duyurular')
+                <!-- Slider End -->
+               @include('inc.kayan-logolar')  
+               
+                {{-- Blog Kartları Kayan Alanı --}}
+                <div class="back-blog-section" style="padding: 80px 0; background-color: #f8f8f8;">
+                    <div class="container">
+                        {{-- Başlık Bölümü --}}
+                        <div class="back-sec-title text-center mb-50">
+                            <h5 class="back-subtitle" style="color: #0d1e50; font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Blogumuzdan Son Haberler</h5>
+                            <h2 class="back-title mb-0" style="font-size: 42px; color: #0d1e50; font-weight: 700; line-height: 1.2;">Güncel İçeriklerimizle <br>Bilgiye Ulaşın</h2>
                         </div>
-                        <div class="slider-content">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-9">
-                                        <div class="content-part">
-                                            <h2 class="slider-title">
-                                                Kbiz is <br>The software for <br>Your business.
-                                            </h2>
-                                            <p class="slider-subtitle">
-                                                So I said down the pub argy bargy such a fibber bonnet <br>victoria sponge porkies.
-                                            </p>
-                                            <div class="slider-btn">
-                                                <a href="about.html" class="back-btn transparent">Disover More</a>
-                                            </div>
-                                        </div>
+
+                        {{-- Slider Ayarları --}}
+                        @php
+                            $kaymaHizi = 3000; // Otomatik kaydırma hızı (milisaniye)
+                            $masaustuSlideSayisi = 2; // Masaüstünde yan yana gösterilecek slide sayısı
+                            $mobilSlideSayisi = 1;    // Mobilde yan yana gösterilecek slide sayısı
+                        @endphp
+
+                        {{-- Blog Kartları Alanı (Slider) --}}
+                        <div class="blog-slider owl-carousel"
+                             data-desktop-slides="{{ $masaustuSlideSayisi }}"
+                             data-mobile-slides="{{ $mobilSlideSayisi }}"
+                             data-scroll-speed="{{ $kaymaHizi }}">
+                            {{-- Örnek Blog Kartı 1 --}}
+                            <div class="single-blog-card" style="background-color: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease-in-out; margin: 0 15px;">
+                                <div class="blog-image" style="height: 250px; overflow: hidden;">
+                                    <a href="#" style="display: block;"><img src="https://www.egesiad.com/imgs/950x534x2/toplantY-organizasyonu_2.jpg" alt="Blog Görseli" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease-in-out;"></a>
+                                </div>
+                                <div class="blog-content" style="padding: 25px;">
+                                    <h3 class="blog-title" style="font-size: 24px; color: #0d1e50; font-weight: 700; margin-bottom: 15px;"><a href="#" style="color: #0d1e50; text-decoration: none; transition: color 0.3s ease-in-out;">Dijital Dönüşümde Yeni Adımlar</a></h3>
+                                    <p class="blog-description" style="font-size: 16px; color: #555; line-height: 1.6; margin-bottom: 20px;">İşletmenizi geleceğe taşımak için dijitalleşmenin önemini ve atılması gereken adımları keşfedin.</p>
+                                    <div class="blog-meta">
+                                        <a href="#" class="read-more-btn" style="display: inline-block; color: #0d1e50; font-weight: 600; text-decoration: none; transition: color 0.3s ease-in-out;">Devamını Oku <i class="fa fa-arrow-right" style="margin-left: 8px;"></i></a>
                                     </div>
-                                    <div class="col-lg-3 hidden-md">
-                                        <div class="video-icon">
-                                            <a class="popup-video" href="https://s3.envato.com/h264-video-previews/35a124ab-b524-48a2-8465-16b24e925c0c/21237996.mp4" title="Video Icon">
-                                                <img src="assets/images/slider/play.png" alt="play icon">
-                                            </a>
-                                        </div>
+                                </div>
+                            </div>
+                            {{-- Örnek Blog Kartı 2 --}}
+                            <div class="single-blog-card" style="background-color: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease-in-out; margin: 0 15px;">
+                                <div class="blog-image" style="height: 250px; overflow: hidden;">
+                                    <a href="#" style="display: block;"><img src="https://www.egesiad.com/imgs/950x534x2/toplantY-organizasyonu_2.jpg" alt="Blog Görseli" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease-in-out;"></a>
+                                </div>
+                                <div class="blog-content" style="padding: 25px;">
+                                    <h3 class="blog-title" style="font-size: 24px; color: #0d1e50; font-weight: 700; margin-bottom: 15px;"><a href="#" style="color: #0d1e50; text-decoration: none; transition: color 0.3s ease-in-out;">Yapay Zeka ve İş Dünyası</a></h3>
+                                    <p class="blog-description" style="font-size: 16px; color: #555; line-height: 1.6; margin-bottom: 20px;">Yapay zekanın iş süreçlerinizi nasıl optimize edebileceğini ve rekabet avantajı sağlayabileceğini öğrenin.</p>
+                                    <div class="blog-meta">
+                                        <a href="#" class="read-more-btn" style="display: inline-block; color: #0d1e50; font-weight: 600; text-decoration: none; transition: color 0.3s ease-in-out;">Devamını Oku <i class="fa fa-arrow-right" style="margin-left: 8px;"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- Örnek Blog Kartı 3 --}}
+                            <div class="single-blog-card" style="background-color: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease-in-out; margin: 0 15px;">
+                                <div class="blog-image" style="height: 250px; overflow: hidden;">
+                                    <a href="#" style="display: block;"><img src="https://www.egesiad.com/imgs/950x534x2/toplantY-organizasyonu_2.jpg" alt="Blog Görseli" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease-in-out;"></a>
+                                </div>
+                                <div class="blog-content" style="padding: 25px;">
+                                    <h3 class="blog-title" style="font-size: 24px; color: #0d1e50; font-weight: 700; margin-bottom: 15px;"><a href="#" style="color: #0d1e50; text-decoration: none; transition: color 0.3s ease-in-out;">Sürdürülebilirlik Raporlaması Rehberi</a></h3>
+                                    <p class="blog-description" style="font-size: 16px; color: #555; line-height: 1.6; margin-bottom: 20px;">Kurumsal sürdürülebilirlik hedeflerinize ulaşmak için etkili raporlama stratejileri.</p>
+                                    <div class="blog-meta">
+                                        <a href="#" class="read-more-btn" style="display: inline-block; color: #0d1e50; font-weight: 600; text-decoration: none; transition: color 0.3s ease-in-out;">Devamını Oku <i class="fa fa-arrow-right" style="margin-left: 8px;"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="single-slide">
-                        <div class="slider-img">
-                            <img class="desktop" src="assets/images/slider/slider4.jpg" alt="Slider Image 4">
-                            <img class="mobile" src="assets/images/slider/slider4-mobile.jpg" alt="Slider Image 4">
-                        </div>
-                        <div class="slider-content">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-9">
-                                        <div class="content-part">
-                                            <h2 class="slider-title">
-                                                Kbiz is <br>The software for <br>Your business.
-                                            </h2>
-                                            <p class="slider-subtitle">
-                                                So I said down the pub argy bargy such a fibber bonnet <br>victoria sponge porkies.
-                                            </p>
-                                            <div class="slider-btn">
-                                                <a href="about.html" class="back-btn transparent">Disover More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 hidden-md">
-                                        <div class="video-icon">
-                                            <a class="popup-video" href="https://s3.envato.com/h264-video-previews/35a124ab-b524-48a2-8465-16b24e925c0c/21237996.mp4" title="Video Icon">
-                                                <img src="assets/images/slider/play.png" alt="play icon">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {{-- Not: Bu alana bir JS slider kütüphanesi (örn. Owl Carousel, Swiper) entegre edilmelidir. --}}
                     </div>
                 </div>
-                <!-- Slider End -->
+                {{-- Blog Kartları Kayan Alanı Sonu --}}
+
+
 
                 <!-- Start Service here -->
                 <div class="back-service">
-                    <div class="container">
-                        <div class="row align-items-end mb-50 md-mb-30">
-                            <div class="col-lg-8">
+                    <div class="container-fluid">
+                        <div class="row justify-content-center mb-50 md-mb-30">
+                            <div class="col-lg-12">
                                 <div class="back-sec-title">
-                                    <h5 class="back-subtitle">Modern Business</h5>
-                                    <h2 class="back-title mb-0">Lets Take Your <br>Experience next level</h2>
+                                    <h5 class="back-subtitle">Hizmetlerimiz</h5>
+                                    <h2 class="back-title mb-0">Lets Take Your </h2>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="back-sec-btn text-right md-text-left mb-15 md-mb-0 md-mt-15">
-                                    <a href="service.html" class="back-btn readon">See All Services</a>
-                                </div>
-                            </div>
+                          
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-3 col-md-6 border-top border-right res-service">
+                            <div class="col-lg-2 col-md-6 border-top border-right res-service">
                                 <div class="single-service">
                                     <div class="service-icon">
                                         <img src="assets/images/service/1.svg" alt="">
@@ -102,7 +103,7 @@
                                     <a href="service-details.html" class="service-arrow-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d1e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 border-top border-right pl-50 res-service">
+                            <div class="col-lg-2 col-md-6 border-top border-right pl-50 res-service">
                                 <div class="single-service">
                                     <div class="service-icon">
                                         <img src="assets/images/service/2.svg" alt="">
@@ -111,7 +112,27 @@
                                     <a href="service-details.html" class="service-arrow-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d1e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 border-top border-right pl-50 res-service">
+                            <div class="col-lg-2 col-md-6 border-top border-right pl-50 res-service">
+                                <div class="single-service">
+                                    <div class="service-icon">
+                                        <img src="assets/images/service/2.svg" alt="">
+                                    </div>
+                                    <h3 class="service-title">Finance <br>Consulting</h3>
+                                    <a href="service-details.html" class="service-arrow-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d1e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-6 border-top border-right pl-50 res-service">
+                                <div class="single-service">
+                                    <div class="service-icon">
+                                        <img src="assets/images/service/2.svg" alt="">
+                                    </div>
+                                    <h3 class="service-title">Finance <br>Consulting</h3>
+                                    <a href="service-details.html" class="service-arrow-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d1e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-6 border-top border-right pl-50 res-service">
                                 <div class="single-service">
                                     <div class="service-icon">
                                         <img src="assets/images/service/3.svg" alt="">
@@ -120,7 +141,7 @@
                                     <a href="service-details.html" class="service-arrow-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d1e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-6 border-top pl-50 res-service">
+                            <div class="col-lg-2 col-md-6 border-top pl-50 res-service">
                                 <div class="single-service">
                                     <div class="service-icon">
                                         <img src="assets/images/service/4.svg" alt="">
@@ -135,17 +156,19 @@
                 <!-- End Service here -->
 
                 <!-- Start About here -->
+                <hr>
+                <h2 class="back-title text-center">Başkanımız Hakkında </h2>
                 <div class="back-about pt-40 md-pt-60 pb-140 md-pb-100">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row align-items-center">
                             <div class="offset-lg-1"></div>
                             <div class="col-lg-5">
                                 <div class="about-img">
-                                    <img src="assets/images/about/about1.jpg" alt="">
-                                    <div class="about-text">
+                                    <img class="rounded float-right" src="https://www.egesiad.com/imgs/500x400x1/04bd4c28-b894-4637-84b8-256bbf6fe9a8_1.jpg" alt="">
+                                   <!-- <div class="about-text">
                                         <h3 class="about-text-title">1997</h3>
                                         <p class="about-text-desc">25+ years of <br>experience.</p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="offset-lg-1"></div>
@@ -155,20 +178,7 @@
                                     <h2 class="back-title">The assistant for <br>your business</h2>
                                     <p class="back-desc">I'm a subhead that ges with a story.</p>
                                 </div>
-                                <div class="counter-part">
-                                    <div class="single-counter">
-                                        <div class="count-number">
-                                            <span class="back-count">94</span><span class="counter-icon">%</span>
-                                        </div>
-                                        <div class="count-text">Agency increased revenue <br>around 94% with kbiz.</div>
-                                    </div>
-                                    <div class="single-counter">
-                                        <div class="count-number">
-                                            <span class="back-count">100</span><span class="counter-icon">+</span>
-                                        </div>
-                                        <div class="count-text">Components make any <br>design stand out.</div>
-                                    </div>
-                                </div>
+
 
                                 <div class="about-btn">
                                     <a href="about.html" class="back-btn">What is a VA exactly</a>
@@ -183,16 +193,16 @@
                 <div class="back-case-studies">
                     <div class="container">
                         <div class="row align-items-end mb-50 md-mb-30">
-                            <div class="col-lg-8">
+                            <div class="col-lg-12">
                                 <div class="back-sec-title md-text-center">
-                                    <h5 class="back-subtitle">Our Case Studies</h5>
-                                    <h2 class="back-title white-color mb-0">Modern Case Studies</h2>
+                                    {{-- <h5 class="back-subtitle">Our Case Studies</h5> --}}
+                                    <h2 class="back-title white-color mb-0">Hizmetlerimiz</h2>
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="back-sec-btn text-right md-text-center mb-15 md-mb-0 md-mt-15">
+                                {{-- <div class="back-sec-btn text-right md-text-center mb-15 md-mb-0 md-mt-15">
                                     <a href="portfolio.html" class="back-btn readon">See All Portfolio</a>
-                                </div>
+                                </div>  --}}
                             </div>
                         </div>
                     </div>
@@ -334,13 +344,43 @@
 
                 <!-- Start Team here -->
                 <div class="back-team">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="back-sec-title text-center mb-50 md-mb-30">
-                            <h5 class="back-subtitle">Team Members</h5>
-                            <h2 class="back-title mb-0">The Management Team</h2>
+                            {{-- <h5 class="back-subtitle">Üyelerimiz</h5> --}}
+                            <h2 class="back-title mb-0">Üyelerimiz</h2>
                         </div>
                         <div class="team-slider owl-carousel">
                             <div class="single-team">
+                                <div class="team-img">
+                                    <img src="assets/images/team/1.jpg" alt="Team Image">
+                                    <div class="team-info">
+                                        <p class="desgnation">UX Designer</p>
+                                        <h3 class="name"><a href="#">Max Conversion</a></h3>
+                                    </div>
+                                    <ul class="social-links">
+                                        <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a></li>
+                                        <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                                        <li><a href="#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
+                                        <li><a href="#"><span aria-hidden="true" class="social_vimeo"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                                  <div class="single-team">
+                                <div class="team-img">
+                                    <img src="assets/images/team/1.jpg" alt="Team Image">
+                                    <div class="team-info">
+                                        <p class="desgnation">UX Designer</p>
+                                        <h3 class="name"><a href="#">Max Conversion</a></h3>
+                                    </div>
+                                    <ul class="social-links">
+                                        <li><a href="#"><span aria-hidden="true" class="social_facebook"></span></a></li>
+                                        <li><a href="#"><span aria-hidden="true" class="social_twitter"></span></a></li>
+                                        <li><a href="#"><span aria-hidden="true" class="social_linkedin"></span></a></li>
+                                        <li><a href="#"><span aria-hidden="true" class="social_vimeo"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                                  <div class="single-team">
                                 <div class="team-img">
                                     <img src="assets/images/team/1.jpg" alt="Team Image">
                                     <div class="team-info">
@@ -842,3 +882,5 @@
         </div>
 
         @endsection
+
+
