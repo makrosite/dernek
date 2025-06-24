@@ -39,7 +39,7 @@
                                 <div class="logo"><a href="index.html" class="logo-text"><span class="primary-color normal">K</span>biz.</a></div>
                                 <div class="searchbar-part hide-desktop">
                                     <div class="searchbar" id="icon_searchs">
-                                        <a href="#"><span aria-hidden="true" class="icon_search"></span>dddd</a>
+                                        <a href="#"><span aria-hidden="true" class="icon_search"></span>ddddd</a>
                                     </div>
                                     <a href="contact.html" class="back-btn z-index-1">Get Starteds</a>
                                 </div>
