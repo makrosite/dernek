@@ -10,7 +10,7 @@
                         {{-- Kayan Logolar Bölümü --}}
                         <marquee behavior="scroll" direction="left" scrollamount="5" style="height: 100px; line-height: 100px;">
                             {{-- Örnek logo görselleri, daha sonra veritabanından çekilebilir --}}
-                            <img src="https://www.kosgeb.gov.tr/Web/Content/assets/img/logo.png" alt="Müşteri Logosu 1" style="height: 70px; vertical-align: middle; margin: 0 40px; opacity: 0.8;">
+                            <img src="https://www.kosgeb.gov.tr/Web/Content/assets/img/logo.png" alt="Müşteri Logosu 21" style="height: 70px; vertical-align: middle; margin: 0 40px; opacity: 0.8;">
                             <img src="https://www.kosgeb.gov.tr/Web/Content/assets/img/logo.png" alt="Müşteri Logosu 2" style="height: 70px; vertical-align: middle; margin: 0 40px; opacity: 0.8;">
                             <img src="https://www.kosgeb.gov.tr/Web/Content/assets/img/logo.png" alt="Müşteri Logosu 3" style="height: 70px; vertical-align: middle; margin: 0 40px; opacity: 0.8;">
                             <img src="https://www.kosgeb.gov.tr/Web/Content/assets/img/logo.png" alt="Müşteri Logosu 4" style="height: 70px; vertical-align: middle; margin: 0 40px; opacity: 0.8;">

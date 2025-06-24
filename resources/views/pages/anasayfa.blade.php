@@ -10,8 +10,8 @@
                @include('inc.slider')
                @include('inc.kayan-duyurular')
                 <!-- Slider End -->
-               @include('inc.kayan-logolar')  
-               
+               @include('inc.kayan-logolar')
+
                 {{-- Blog Kartları Kayan Alanı --}}
                 <div class="back-blog-section" style="padding: 80px 0; background-color: #f8f8f8;">
                     <div class="container">
@@ -24,7 +24,7 @@
                         {{-- Slider Ayarları --}}
                         @php
                             $kaymaHizi = 3000; // Otomatik kaydırma hızı (milisaniye)
-                            $masaustuSlideSayisi = 2; // Masaüstünde yan yana gösterilecek slide sayısı
+                            $masaustuSlideSayisi = 3; // Masaüstünde yan yana gösterilecek slide sayısı
                             $mobilSlideSayisi = 1;    // Mobilde yan yana gösterilecek slide sayısı
                         @endphp
 
@@ -90,7 +90,7 @@
                                     <h2 class="back-title mb-0">Lets Take Your </h2>
                                 </div>
                             </div>
-                          
+
                         </div>
 
                         <div class="row">

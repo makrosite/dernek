@@ -10,7 +10,7 @@
                             ];
                             // Yazı rengi ve hız için yeni değişkenler
                             $marqueeTextColor = '#333'; // Varsayılan renk
-                            $marqueeScrollAmount = 10;    // Varsayılan hız
+                            $marqueeScrollAmount = 9;    // Varsayılan hız
                         @endphp
                         <marquee behavior="scroll" direction="left" scrollamount="{{ $marqueeScrollAmount }}" style="font-size: 20px; font-weight: bold; color: {{ $marqueeTextColor }}; line-height: 1.6; white-space: nowrap;">
                             @foreach($duyurular as $index => $duyuru)

@@ -41,7 +41,7 @@
                                     <div class="searchbar" id="icon_searchs">
                                         <a href="#"><span aria-hidden="true" class="icon_search"></span>dddd</a>
                                     </div>
-                                    <a href="contact.html" class="back-btn z-index-1">Get Started</a>
+                                    <a href="contact.html" class="back-btn z-index-1">Get Starteds</a>
                                 </div>
 
                                 <button type="button" id="menu-btn">
