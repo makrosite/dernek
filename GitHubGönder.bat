@@ -1,5 +1,4 @@
 @echo off
-cd /d C:\projex\ # Proje klasörünü güncelle
 
 echo Git değişiklikleri ekleniyor...
 git add .
