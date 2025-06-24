@@ -1,6 +1,6 @@
 
         <div class="toolbar-area hidden-md">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-8 col-md-12">
                         <div class="toolbar-text">
@@ -30,7 +30,7 @@
        <header id="back-header" class="back-header">
 
             <div class="menu-part">
-                <div class="container">
+                <div class="container-fluid">
                     <!-- back Menu -->
                     <div class="back-main-menu">
                         <nav>
@@ -65,100 +65,22 @@
                                             <li> <a href="about.html">Hakkımızda</a></li>
                                             <li> <a href="service.html">Yönetim Kurulu</a>
                                             <li><a href="service.html">Başkanın Mesajları</a></li>
-                                            <li><a href="service-details.html"></a>Tarihçe</li>
-                                            <li><a href="service-details.html"></a>İş Birlikleri & İşritakler</li>
+                                            <li><a href="service-details.html">Tarihçe</a></li>
+                                            <li><a href="service-details.html">İş Birlikleri & İşritakler</a></li>
                                         </ul>
                                     </li>
                                     <li> <a href="portfolio.html">Üyelerimiz</a>
-                                        <ul>
-                                            <li><a href="portfolio.html">Portfolio</a></li>
-                                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                        </ul>
+
                                     </li>
                                     <li class="mega-inner"> <a href="#">Haberler</a>
-                                        <ul class="mega-menu">
-                                            <li>
-                                                <div class="mega-menu-container">
-                                                    <div class="menu-item">
-                                                        <div class="sub-menu-mega">
-                                                            <div class="menu-title"> Elements 1 </div>
-                                                            <div><a href="profilecard.html">Profile Card</a></div>
-                                                            <div><a href="typography.html">Typography</a></div>
-                                                            <div><a href="column.html">Text Column</a></div>
-                                                            <div><a href="carousel-slider.html">Carousel Slider</a></div>
-                                                            <div><a href="blockquote.html">Blockquote</a></div>
-                                                            <div><a href="typewriter.html">Type Writer</a></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="menu-item">
-                                                        <div class="sub-menu-mega">
-                                                            <div class="menu-title">Elements 2</div>
-                                                            <div> <a href="calltoaction.html">Call to Action</a></div>
-                                                            <div><a href="simpleicon.html">Simple Icon</a></div>
-                                                            <div><a href="easytab.html">Easy Tab</a></div>
-                                                            <div><a href="modernteam.html">Modern Team </a></div>
-                                                            <div><a href="faqs.html">FAQs</a></div>
-                                                            <div><a href="testimonials.html">Testimonials</a></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="menu-item">
-                                                        <div class="sub-menu-mega">
-                                                            <div class="menu-title"> Elements 3 </div>
-                                                            <div><a href="beforeafter.html">Before & After</a></div>
-                                                            <div><a href="flexslider-slider.html">Flex Slider</a></div>
-                                                            <div><a href="dividers.html">Dividers</a></div>
-                                                            <div><a href="video.html">Video</a></div>
-                                                            <div><a href="latestposts.html">Latest Posts</a></div>
-                                                            <div><a href="googlemaps.html">Google Map</a></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="menu-item">
-                                                        <div class="sub-menu-mega">
-                                                            <div class="menu-title"> Elements 4 </div>
-                                                            <div><a href="pricing.html">Pricing Table</a></div>
-                                                            <div><a href="contacts.html">Contact Form</a></div>
-                                                            <div><a href="login.html">Login </a></div>
-                                                            <div><a href="register.html">Register</a></div>
-                                                            <div><a href="clients.html">Clients</a></div>
-                                                            <div><a href="button.html">Modern Button</a></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                        <ul >
+                                            <li> <a href="about.html">Duyurular</a></li>
+                                            <li> <a href="about.html">Etkinlikler</a></li>
+                                            <li> <a href="about.html">Teşvik ve Hibeler</a></li>
+                                            <li> <a href="about.html">Sosyal Sorumluluk</a></li>
                                         </ul>
                                     </li>
-                                    <li> <a href="blog.html">İletişim</a>
-                                        <ul>
-                                            <li><a href="blog.html">Blog</a>
-                                                <ul>
-                                                    <li><a href="blog.html">Classic</a></li>
-                                                    <li><a href="blog-left-sidebar.html">Left Sidebar</a></li>
-                                                    <li><a href="blog-right-sidebar.html">Right Sidebar</a></li>
-                                                    <li><a href="blog-fullwidth.html">Full Width</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="blog-details.html">Blog Single</a>
-                                                <ul>
-                                                    <li><a href="blog-details.html">Classic</a></li>
-                                                    <li><a href="blog-details-left.html">Left Sidebar</a></li>
-                                                    <li><a href="blog-details-right.html">Right Sidebar</a></li>
-                                                    <li><a href="blog-details-full.html">Full Width</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-<li> <a href="shop.html">Shop</a>
-                                        <ul>
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="shop-single.html">Shop Single</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="my-account.html">My Account</a></li>
-                                        </ul>
-                                    </li>
-                                    <li> <a href="">Hakkımızda</a></li>
-                                </ul>
-
+                                    <li> <a href="blog.html">İletişim</a> </li>
                                 <div class="searchbar-part">
                                     <div class="searchbar" id="icon_search">
                                         <a href="#"><span aria-hidden="true" class="icon_search"></span> Search... </a>
