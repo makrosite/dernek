@@ -64,15 +64,7 @@
         <!-- Scroll to Top End -->
 
         <!-- Searchbar Start -->
-        <div class="searchbar-expanded">
-            <div class="searchbar">
-                <form>
-                    <button type="submit"><span aria-hidden="true" class="icon_search"></span></button>
-                    <input type="text" placeholder="Start Searching...">
-                </form>
-                <span id="search-close" class="search-close icon_close"></span>
-            </div>
-        </div>
+        <!-- Arama popup alanı kaldırıldı -->
         <!-- Searchbar End -->
 
         <!-- jquery latest version -->

@@ -39,7 +39,7 @@
                                 <div class="logo"><a href="index.html" class="logo-text"><span class="primary-color normal">K</span>biz.</a></div>
                                 <div class="searchbar-part hide-desktop">
                                     <div class="searchbar" id="icon_searchs">
-                                        <a href="#"><span aria-hidden="true" class="icon_search"></span> Search... </a>
+                                        <a href="#"><span aria-hidden="true" class="icon_search"></span>dddd</a>
                                     </div>
                                     <a href="contact.html" class="back-btn z-index-1">Get Started</a>
                                 </div>
@@ -66,12 +66,11 @@
                                             <li> <a href="service.html">Yönetim Kurulu</a>
                                             <li><a href="service.html">Başkanın Mesajları</a></li>
                                             <li><a href="service-details.html">Tarihçe</a></li>
-                                            <li><a href="service-details.html">İş Birlikleri & İşritakler</a></li>
+
                                         </ul>
                                     </li>
-                                    <li> <a href="portfolio.html">Üyelerimiz</a>
-
-                                    </li>
+                                    <li> <a href="portfolio.html">Üyelerimiz</a></li>
+                                     <li><a href="service-details.html">İş Birlikleri</a></li>
                                     <li class="mega-inner"> <a href="#">Haberler</a>
                                         <ul >
                                             <li> <a href="about.html">Duyurular</a></li>
