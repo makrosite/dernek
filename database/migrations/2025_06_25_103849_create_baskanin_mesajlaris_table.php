@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('baskanin_mesajlaris', function (Blueprint $table) {
             $table->id();
+            $table->longText('mesaj')->nullable();
             $table->timestamps();
         });
     }

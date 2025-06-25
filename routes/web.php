@@ -35,5 +35,16 @@ Route::get('/uyeler',[UyelerController::class,'index']);
 
 
 
+// backend routerları
+Route::get('/yonetim',function(){
+
+    return view('panel.pages.mian');
+
+
+})->middleware(middleware:['auth','verified']);
+
+
+
+
 
 require __DIR__.'/auth.php';

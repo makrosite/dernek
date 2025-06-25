@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('hakkimizdas', function (Blueprint $table) {
             $table->id();
+            $table->string('baslik')->nullable();
+            $table->longText('metin')->nullable();
+            $table->text('modulmetin')->nullable();
+           $table->boolean('durum')->default(true);
+
             $table->timestamps();
         });
     }

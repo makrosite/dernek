@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class BaskaninMesajlari extends Model
 {
+public static function yorum($veri){
+
+
+}
+
     use HasFactory;
 }

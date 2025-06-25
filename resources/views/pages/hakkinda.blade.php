@@ -32,18 +32,16 @@
                             <div class="col-lg-10">
                                 <div class="back-sec-title text-center mb-40">
                                     <h5 class="back-subtitle">Hakkımızda</h5>
-                                    <h2 class="back-title">Biz Kimiz?</h2>
+                                    <h2 class="back-title">{{$data->baslik}}</h2>
                                 </div>
                                 <div class="back-desc text-center" style="font-size: 1.2rem; line-height: 2; color: #444;">
                                     <p>
-                                        Firmamız, 1997 yılından bu yana sektörde edindiği tecrübe ve birikimle müşterilerine en iyi hizmeti sunmayı amaçlamaktadır.
-                                        <br><br>
-                                        Yenilikçi yaklaşımımız, güçlü ekibimiz ve müşteri memnuniyetine verdiğimiz önem ile her geçen gün büyümeye ve gelişmeye devam ediyoruz.
-                                        <br><br>
-                                        Değerlerimizden ödün vermeden, kaliteli ve güvenilir çözümler sunarak sektörde öncü olmayı sürdürüyoruz.
-                                        <br><br>
-                                        Bizi tercih ettiğiniz için teşekkür ederiz.
+                                      {{$data->metin}}
+
                                     </p>
+                                    <hr>
+
+                                    {{$baskan->mesaj}}
                                 </div>
                             </div>
                         </div>
