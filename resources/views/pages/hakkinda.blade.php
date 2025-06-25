@@ -41,7 +41,6 @@
                                     </p>
                                     <hr>
 
-                                    {{$baskan->mesaj}}
                                 </div>
                             </div>
                         </div>

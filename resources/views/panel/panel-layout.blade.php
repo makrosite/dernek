@@ -10,22 +10,22 @@
 	<title>Blank Page - Zeiss Template</title>
 
 	<!-- Main Styles -->
-	<link rel="stylesheet" href="panel/assets/styles/style.min.css">
+	<link rel="stylesheet" href="{{asset('panel/assets/styles/style.min.css')}}">
 
 	<!-- Material Design Icon -->
-	<link rel="stylesheet" href="panel/assets/fonts/material-design/css/materialdesignicons.css">
+	<link rel="stylesheet" href="{{asset('panel/assets/fonts/material-design/css/materialdesignicons.css')}}">
 
 	<!-- mCustomScrollbar -->
-	<link rel="stylesheet" href="panel/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="{{asset('panel/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css')}}">
 
 	<!-- Waves Effect -->
-	<link rel="stylesheet" href="panel/assets/plugin/waves/waves.min.css">
+	<link rel="stylesheet" href="{{asset('panel/assets/plugin/waves/waves.min.css')}}">
 
 	<!-- Sweet Alert -->
-	<link rel="stylesheet" href="panel/assets/plugin/sweet-alert/sweetalert.css">
+	<link rel="stylesheet" href="{{asset('panel/assets/plugin/sweet-alert/sweetalert.css')}}">
 
 	<!-- Color Picker -->
-	<link rel="stylesheet" href="panel/assets/color-switcher/color-switcher.min.css">
+	<link rel="stylesheet" href="{{asset('panel/assets/color-switcher/color-switcher.min.css')}}">
 </head>
 
 <body>
@@ -60,17 +60,17 @@
 	<!--
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="panel/assets/scripts/jquery.min.js"></script>
-	<script src="panel/assets/scripts/modernizr.min.js"></script>
-	<script src="panel/assets/plugin/bootstrap/js/bootstrap.min.js"></script>
-	<script src="panel/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="panel/assets/plugin/nprogress/nprogress.js"></script>
-	<script src="panel/assets/plugin/sweet-alert/sweetalert.min.js"></script>
-	<script src="panel/assets/plugin/waves/waves.min.js"></script>
+	<script src="{{asset('Panel/assets/scripts/jquery.min.js')}}"></script>
+	<script src="{{asset('Panel/assets/scripts/modernizr.min.js')}}"></script>
+	<script src="{{asset('Panel/assets/plugin/bootstrap/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('Panel/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+	<script src="{{asset('Panel/assets/plugin/nprogress/nprogress.js')}}"></script>
+	<script src="{{asset('Panel/assets/plugin/sweet-alert/sweetalert.min.js')}}"></script>
+	<script src="{{asset('Panel/assets/plugin/waves/waves.min.js')}}"></script>
 	<!-- Full Screen Plugin -->
-	<script src="panel/assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
+	<script src="{{asset('Panel/assets/plugin/fullscreen/jquery.fullscreen-min.js')}}"></script>
 
-	<script src="panel/assets/scripts/main.min.js"></script>
-	<script src="panel/assets/color-switcher/color-switcher.min.js"></script>
+	<script src="{{asset('Panel/assets/scripts/main.min.js')}}"></script>
+	<script src="{{asset('Panel/assets/color-switcher/color-switcher.min.js')}}"></script>
 </body>
 </html>
