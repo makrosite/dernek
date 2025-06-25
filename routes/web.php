@@ -1,24 +1,16 @@
 <?php
 
 
+use App\Http\Controllers\BaskaninMesajlariController;
+use App\Http\Controllers\TarihceController;
+use App\Http\Controllers\UyelerController;
+use App\Http\Controllers\YonetimKuruluModelController;
+use App\Models\YonetimKuruluModel;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HakkimizdaController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
-Route::get('/', function () {
-    return view('pages.anasayfa');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -30,7 +22,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 /// frontend Routeları
-Route::get('/hakkinda',[HakkimizdaController::class,'index']);
+
+
+Route::get('/', function () {return view('pages.anasayfa');})->name('anasayfa');
+Route::get('/hakkinda',[HakkimizdaController::class,'index'])->name('hakkinda');
+Route::get('/yonetim-kurulu',[YonetimKuruluModelController::class,'index']);
+Route::get('/baskan',[BaskaninMesajlariController::class,'index']);
+Route::get('/tarihce',[TarihceController::class,'index']);
+Route::get('/uyeler',[UyelerController::class,'index']);
+
+
+
+
 
 
 require __DIR__.'/auth.php';

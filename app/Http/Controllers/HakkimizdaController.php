@@ -9,11 +9,7 @@ class HakkimizdaController extends Controller
 
 public function index(){
 
-$data = [
-
-    "metin"=> "metin",
-] ;
-    return view('pages.hakkinda',compact('data'));
+    return view('pages.hakkinda',);
 
 }
 

@@ -1,4 +1,4 @@
-@extends('home-layaut')
+@extends('home-layout')
 
 
 @section('page')

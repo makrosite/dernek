@@ -53,11 +53,8 @@
                             <!-- Menu Structure-->
                             <div class="back-inner-menus">
                                 <ul id="backmenu" class="back-menus back-sub-shadow">
-                                    <li> <a href="">Anasayfa</a>
-                                        <ul>
-                                            <li><a href="index.html">Home One</a></li>
-                                            <li><a href="index-two.html">Home Two</a></li>
-                                        </ul>
+                                    <li> <a href="{{route('anasayfa')}}">Anasayfa</a>
+
                                     </li>
 
                                     <li> <a href="#">Kurumsal</a>
