@@ -1,7 +1,7 @@
  <div class="home-slider-part owl-carousel">
                     <div class="single-slide">
                         <div class="slider-img">
-                            <img class="desktop" src="assets/images/slider/home-slider11.png" alt="Slider Image 1">
+                            <img style="width:1920; height: 400px;" class="desktop" src="s1.jpg" alt="Slider Image 1">
                             <img class="mobile" src="assets/images/slider/home-slider11-mobile.jpg" alt="Slider Image 1">
                         </div>
                         <div class="slider-content">
@@ -33,7 +33,7 @@
                     </div>
                     <div class="single-slide">
                         <div class="slider-img">
-                            <img class="desktop" src="assets/images/slider/slider4.jpg" alt="Slider Image 4">
+                            <img style="width:1920; height: 400px;" class="desktop" src="s2.jpg" alt="Slider Image 4">
                             <img class="mobile" src="assets/images/slider/slider4-mobile.jpg" alt="Slider Image 4">
                         </div>
                         <div class="slider-content">

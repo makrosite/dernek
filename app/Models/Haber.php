@@ -7,5 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 
 class Haber extends Model
 {
+    public static function getHaberler(){
+        return self::where('durum', 1)->get();
+    }
+
+public static function TekHaber($id){
+
+    return  self::where('id',$id)->first();
+
+
+
+
+}
+
+
+
+
+    protected $table = 'habers';
+    protected $fillable = ['baslik', 'metin', 'resim', 'durum', 'kategori', 'yazar', 'okunma'];
     use HasFactory;
 }

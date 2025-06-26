@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\BaskaninMesajlariController;
 use App\Http\Controllers\HaberController;
+use App\Http\Controllers\SayfalarController;
 use App\Http\Controllers\TarihceController;
 use App\Http\Controllers\UyelerController;
 use App\Http\Controllers\YonetimKuruluModelController;
@@ -34,6 +35,10 @@ Route::get('/uyeler',[UyelerController::class,'index'])->name('uyelerimiz');
 Route::get('/haberler',[HaberController::class,'index'])->name('haberler');
 Route::get('/duyurular',[HaberController::class,'duyurular'])->name('duyurular');
 Route::get('/etkinlikler',[HaberController::class,'etkinlikler'])->name('etkinlikler');
+Route::get('/haber/{id}',[HaberController::class,'haberdetay'])->name('haberdetay');
+Route::get('/isbirlikleri',[HaberController::class,'isbirlikleri'])->name('isbirlikleri');
+Route::get('/sayfa/{id}',[SayfalarController::class,'index'])->name('sayfa');
+
 
 
 

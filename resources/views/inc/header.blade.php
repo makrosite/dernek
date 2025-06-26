@@ -36,7 +36,7 @@
                         <nav>
                             <!-- Menu Toggle btn-->
                             <div class="menu-toggle">
-                                <div class="logo"><a href="index.html" class="logo-text"><span class="primary-color normal">K</span>biz.</a></div>
+                                <div class="logo"><a href="{{Route('anasayfa')}}" class="logo-text"><span class="primary-color normal">K</span>biz.</a></div>
                                 <div class="searchbar-part hide-desktop">
                                     <div class="searchbar" id="icon_searchs">
                                         <a href="#"><span aria-hidden="true" class="icon_search"></span>ddddd</a>
@@ -59,7 +59,18 @@
 
                                     <li> <a href="#">Kurumsal</a>
                                         <ul>
-                                            <li> <a href="{{route('hakkinda')}}">Hakkımızda</a></li>
+                                            @php
+                                        use App\Models\Sayfalar;
+
+                                                $sayfalar =  Sayfalar::sayfalar();
+
+                                            @endphp
+                                            @foreach ($sayfalar as $sayfa)
+
+                                             <li> <a href="{{ route('sayfa', $sayfa->id) }}">{{$sayfa->sayfa_adi}}</a></li>
+
+                                            @endforeach
+
                                             <li> <a href="service.html">Yönetim Kurulu</a>
                                             <li><a href="service.html">Başkanın Mesajları</a></li>
                                             <li><a href="service-details.html">Tarihçe</a></li>
@@ -67,13 +78,13 @@
                                         </ul>
                                     </li>
                                     <li> <a href="{{route('uyelerimiz')}}">Üyelerimiz</a></li>
-                                     <li><a href="isBirlikleri">İş Birlikleri</a></li>
-                                    <li class="{{route('haberler')}}"> <a href="#">Haberler</a>
+                                     <li><a href="{{route('isbirlikleri')}}">İş Birlikleri</a></li>
+                                    <li > <a href="{{route('haberler')}}">Haberler</a>
                                         <ul >
                                             <li> <a href="{{route('duyurular')}}">Duyurular</a></li>
                                             <li> <a href="etkinlikler">Etkinlikler</a></li>
                                             <li> <a href="about.html">Teşvik ve Hibeler</a></li>
-                                            <li> <a href="about.html">Sosyal Sorumluluk</a></li>
+                                            {{-- <li> <a href="about.html">Sosyal Sorumluluk</a></li> --}}
                                         </ul>
                                     </li>
                                     <li> <a href="blog.html">İletişim</a> </li>

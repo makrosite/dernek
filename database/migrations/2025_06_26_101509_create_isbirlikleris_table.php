@@ -11,15 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('habers', function (Blueprint $table) {
+        Schema::create('isbirlikleri', function (Blueprint $table) {
             $table->id();
-            $table->string('baslik');
-            $table->string('metin');
-            $table->string('resim');
-            $table->integer('durum');
-            $table->integer('kategori');
-            $table->integer('yazar');
-            $table->integer('okunma');
+            $table->string('unvan');
+            $table->string('resim')->nullable();
+            $table->string('metin')->nullable();
+            $table->integer('durum')->default(1);
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('habers');
+        Schema::dropIfExists('isbirlikleri');
     }
 };
