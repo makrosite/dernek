@@ -20,13 +20,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 hidden-md">
-                                        <div class="video-icon">
-                                            <a class="popup-video" href="https://s3.envato.com/h264-video-previews/35a124ab-b524-48a2-8465-16b24e925c0c/21237996.mp4" title="Video Icon">
-                                                <img src="assets/images/slider/play.png" alt="play icon">
-                                            </a>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -52,13 +46,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 hidden-md">
-                                        <div class="video-icon">
-                                            <a class="popup-video" href="https://s3.envato.com/h264-video-previews/35a124ab-b524-48a2-8465-16b24e925c0c/21237996.mp4" title="Video Icon">
-                                                <img src="assets/images/slider/play.png" alt="play icon">
-                                            </a>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>

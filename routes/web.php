@@ -4,6 +4,7 @@
 use App\Http\Controllers\BaskaninMesajlariController;
 use App\Http\Controllers\HaberController;
 use App\Http\Controllers\SayfalarController;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TarihceController;
 use App\Http\Controllers\UyelerController;
 use App\Http\Controllers\YonetimKuruluModelController;
@@ -11,6 +12,7 @@ use App\Models\YonetimKuruluModel;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HakkimizdaController;
+
 
 
 
@@ -48,7 +50,10 @@ Route::get('/sayfa/{id}',[SayfalarController::class,'index'])->name('sayfa');
 // backend routerları
 Route::get('/yonetim',function(){ return view('panel.pages.mian');});
 Route::get('/yonetim/hakkimizda',[HakkimizdaController::class,'update'])->name('hakkimizda-panel');
-Route::post('/panel/hakkimizda-post',[HakkimizdaController::class,'hakkimizdaPost'])->name('hakkimizda-update');
+Route::post('/yonetim/hakkimizda-post',[HakkimizdaController::class,'hakkimizdaPost'])->name('hakkimizda-update');
+Route::get('/yonetim/slider',[SliderController::class,'slider'])->name('slider');
+Route::post('/yonetim-slider-ekle',[SliderController::class,'sliderEkle'])->name('slider-ekle');
+Route::get('/yonetim-slide-sil/{id}',[SliderController::class,'sliderSil'])->name('slide-sil');
 
 
 

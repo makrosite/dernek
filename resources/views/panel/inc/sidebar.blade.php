@@ -22,6 +22,15 @@
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>
+                <li>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-flower"></i><span>Slider</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<ul class="sub-menu js__content">
+						<li><a href="icons-font-awesome-icons.html">Slider Ekle</a></li>
+						<li><a href="icons-fontello.html">Slidelar</a></li>
+
+					</ul>
+					<!-- /.sub-menu js__content -->
+				</li>
 
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-chart-bar"></i><span>Haber & Duyuru</span><span class="menu-arrow fa fa-angle-down"></span></a>
