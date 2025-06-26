@@ -59,7 +59,7 @@
 
                                     <li> <a href="#">Kurumsal</a>
                                         <ul>
-                                            <li> <a href="{{route('hakkimizda')}}">Hakkımızda</a></li>
+                                            <li> <a href="hakkinda">Hakkımızda</a></li>
                                             <li> <a href="{{route('yonetim')}}">Yönetim Kurulu</a>
                                             <li><a href="{{route('baskan')}}">Başkanın Mesajları</a></li>
                                             <li><a href="{{route('tarihce')}}">Tarihçe</a></li>
@@ -71,12 +71,12 @@
                                     <li class="{{route('haberler')}}"> <a href="#">Haberler</a>
                                         <ul >
                                             <li> <a href="{{route('duyurular')}}">Duyurular</a></li>
-                                            <li> <a href="{{route('etkinlikler')}}">Etkinlikler</a></li>
-                                            <li> <a href="{{route('tesvik')}}">Teşvik ve Hibeler</a></li>
-                                            <li> <a href="{{route('sosyal')}}">Sosyal Sorumluluk</a></li>
+                                            <li> <a href="etkinlikler">Etkinlikler</a></li>
+                                            <li> <a href="about.html">Teşvik ve Hibeler</a></li>
+                                            <li> <a href="about.html">Sosyal Sorumluluk</a></li>
                                         </ul>
                                     </li>
-                                    <li> <a href="{{route('iletisim')}}">İletişim</a> </li>
+                                    <li> <a href="blog.html">İletişim</a> </li>
                                 <div class="searchbar-part">
                                     <div class="searchbar" id="icon_search">
                                         <a href="#"><span aria-hidden="true" class="icon_search"></span> Search... </a>

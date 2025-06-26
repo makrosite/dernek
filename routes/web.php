@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\BaskaninMesajlariController;
+use App\Http\Controllers\HaberController;
 use App\Http\Controllers\TarihceController;
 use App\Http\Controllers\UyelerController;
 use App\Http\Controllers\YonetimKuruluModelController;
@@ -26,10 +27,14 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', function () {return view('pages.anasayfa');})->name('anasayfa');
 Route::get('/hakkinda',[HakkimizdaController::class,'index'])->name('hakkinda');
-Route::get('/yonetim-kurulu',[YonetimKuruluModelController::class,'index']);
-Route::get('/baskan',[BaskaninMesajlariController::class,'index']);
-Route::get('/tarihce',[TarihceController::class,'index']);
-Route::get('/uyeler',[UyelerController::class,'index']);
+Route::get('/yonetim-kurulu',[YonetimKuruluModelController::class,'index'])->name('yonetim');
+Route::get('/baskan',[BaskaninMesajlariController::class,'index'])->name('baskan');
+Route::get('/tarihce',[TarihceController::class,'index'])->name('tarihce');
+Route::get('/uyeler',[UyelerController::class,'index'])->name('uyelerimiz');
+Route::get('/haberler',[HaberController::class,'index'])->name('haberler');
+Route::get('/duyurular',[HaberController::class,'duyurular'])->name('duyurular');
+Route::get('/etkinlikler',[HaberController::class,'etkinlikler'])->name('etkinlikler');
+
 
 
 

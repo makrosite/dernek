@@ -212,7 +212,7 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="contact-box">
                             <span class="icon-part secondary-bg">
-                                <a href="https://goo.gl/maps/xyz" target="_blank"><img src="assets/images/contact/location.svg" alt="Location Icon"></a>
+                                <a href="https://goo.gl/maps/xyz" target="_blank"><img src="assets/images/contact/location.svg"></a>
                             </span>
                             <span class="text-part">
                                 <a href="https://goo.gl/maps/xyz" target="_blank">1234 Adres, Şehir, Ülke</a>
