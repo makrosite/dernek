@@ -9,8 +9,8 @@ class HakkimizdaController extends Controller
 {
 
 public function index(){
-    $data = DB::table('hakkimizdas')->where('id',1)->first();
-   return view('pages.hakkinda',compact('data'));
+   // $data = DB::table('hakkimizdas')->where('id',1)->first();
+   return view('pages.hakkinda');
 
 
 

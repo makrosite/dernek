@@ -32,11 +32,11 @@
                             <div class="col-lg-10">
                                 <div class="back-sec-title text-center mb-40">
                                     <h5 class="back-subtitle">Hakkımızda</h5>
-                                    <h2 class="back-title">{{$data->baslik}}</h2>
+                                    <h2 class="back-title"></h2>
                                 </div>
                                 <div class="back-desc text-center" style="font-size: 1.2rem; line-height: 2; color: #444;">
                                     <p>
-                                      {{$data->metin}}
+
 
                                     </p>
                                     <hr>
