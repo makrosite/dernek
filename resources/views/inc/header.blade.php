@@ -59,7 +59,7 @@
 
                                     <li> <a href="#">Kurumsal</a>
                                         <ul>
-                                            <li> <a href="about.html">Hakkımızda</a></li>
+                                            <li> <a href="{{route('hakkinda')}}">Hakkımızda</a></li>
                                             <li> <a href="service.html">Yönetim Kurulu</a>
                                             <li><a href="service.html">Başkanın Mesajları</a></li>
                                             <li><a href="service-details.html">Tarihçe</a></li>

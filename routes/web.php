@@ -36,7 +36,7 @@ Route::get('/uyeler',[UyelerController::class,'index']);
 
 
 // backend routerları
-//Route::get('/yonetim',function(){ return view('panel.pages.mian');});
+Route::get('/yonetim',function(){ return view('panel.pages.mian');});
 Route::get('/yonetim/hakkimizda',[HakkimizdaController::class,'update'])->name('hakkimizda-panel');
 Route::post('/panel/hakkimizda-post',[HakkimizdaController::class,'hakkimizdaPost'])->name('hakkimizda-update');
 
