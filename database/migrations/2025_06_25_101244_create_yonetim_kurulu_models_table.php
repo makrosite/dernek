@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('yonetim_kurulu_models', function (Blueprint $table) {
             $table->id();
+            $table->string('adsoyad')->nullable();
+            $table->string('meslek')->nullable();
+            $table->string('telefon')->nullable();
+            $table->string('eposta')->nullable();
+            $table->string('unvan')->nullable();
+            $table->longText('hakkinda')->nullable();
+            $table->string('resim')->nullable();
+            $table->integer('durum')->default(1);
             $table->timestamps();
         });
     }

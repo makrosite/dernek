@@ -12,6 +12,13 @@ class BaskaninMesajlariSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        
+        \DB::table('baskanin_mesajlaris')->insert([
+            [
+                'mesaj' => 'Değerli üyelerimiz, derneğimizin gelişimi için gösterdiğiniz katkılardan dolayı teşekkür ederim. Birlikte daha güzel yarınlara ulaşacağımıza inanıyorum.',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
     }
 }

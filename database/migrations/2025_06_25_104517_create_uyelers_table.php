@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('uyelers', function (Blueprint $table) {
             $table->id();
+            $table->string('firmaunvan')->nullable();
+            $table->string('adsoyad')->nullable();
+            $table->string('telefon')->nullable();
+            $table->string('eposta')->nullable();
+            $table->string('hakkinda')->nullable();
+            $table->string('resim')->nullable();
+            $table->integer('durum')->default(1);
             $table->timestamps();
         });
     }

@@ -9,10 +9,10 @@
 		<div class="navigation">
 			<ul class="menu js__accordion">
 				<li>
-					<a class="waves-effect" href="index.html"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Dashboard</span></a>
+					<a class="waves-effect" href="index.html"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Anasayfa</span></a>
 				</li>
 				<li>
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-flower"></i><span>Icons</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-flower"></i><span>Ayarlar</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="icons-font-awesome-icons.html">Font Awesome</a></li>
 						<li><a href="icons-fontello.html">Fontello</a></li>
@@ -22,11 +22,9 @@
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>
+
 				<li>
-					<a class="waves-effect" href="calendar.html"><i class="menu-icon mdi mdi-calendar-multiple"></i><span>Calendar</span><span class="notice notice-danger">New</span></a>
-				</li>
-				<li>
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-chart-bar"></i><span>Charts</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-chart-bar"></i><span>Haber & Duyuru</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="chart-3d.html">3D Charts</a></li>
 						<li><a href="chart-chartist.html">Chartist Charts</a></li>
@@ -41,7 +39,7 @@
 					<!-- /.sub-menu js__content -->
 				</li>
 				<li>
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-cube-outline"></i><span>Admin UI</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-cube-outline"></i><span>Sayfalar   </span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="ui-notification.html">Notification</a></li>
 						<li><a href="profile.html">Profile</a></li>
@@ -53,7 +51,7 @@
 					<!-- /.sub-menu js__content -->
 				</li>
 				<li>
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-buffer"></i><span>User Interface</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-buffer"></i><span>Üyeler & Yönetim Kurulu</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="ui-buttons.html">Buttons</a></li>
 						<li><a href="ui-cards.html">Cards</a></li>
@@ -65,11 +63,9 @@
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>
+
 				<li>
-					<a class="waves-effect" href="{{route('hakkimizda-panel')}}"><i class="menu-icon mdi mdi-email-outline"></i><span>Hakkımızda</span></a>
-				</li>
-				<li>
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-pencil-box"></i><span>Forms</span><span class="notice notice-blue">7</span></a>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-pencil-box"></i><span>Bağış Yönetimi</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="form-elements.html">General Elements</a></li>
 						<li><a href="form-advanced.html">Advanced Form</a></li>
@@ -91,8 +87,8 @@
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>
-				<li class="current active">
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-book-multiple-variant"></i><span>Page</span><span class="menu-arrow fa fa-angle-down"></span></a>
+				<li >
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-book-multiple-variant"></i><span>Teşvik & Hibeler</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li class="current"><a href="page-starter.html">Starter Page</a></li>
 						<li><a href="page-login.html">Login</a></li>
@@ -106,7 +102,7 @@
 					<!-- /.sub-menu js__content -->
 				</li>
 				<li>
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-folder-multiple"></i><span>Extra Pages</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-folder-multiple"></i><span>Kurumlar</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="extras-contact.html">Contact list</a></li>
 						<li><a href="extras-email-template.html">Email template</a></li>
