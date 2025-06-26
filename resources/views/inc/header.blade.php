@@ -66,12 +66,12 @@
 
                                         </ul>
                                     </li>
-                                    <li> <a href="portfolio.html">Üyelerimiz</a></li>
-                                     <li><a href="service-details.html">İş Birlikleri</a></li>
-                                    <li class="mega-inner"> <a href="#">Haberler</a>
+                                    <li> <a href="{{route('uyelerimiz')}}">Üyelerimiz</a></li>
+                                     <li><a href="isBirlikleri">İş Birlikleri</a></li>
+                                    <li class="{{route('haberler')}}"> <a href="#">Haberler</a>
                                         <ul >
-                                            <li> <a href="about.html">Duyurular</a></li>
-                                            <li> <a href="about.html">Etkinlikler</a></li>
+                                            <li> <a href="{{route('duyurular')}}">Duyurular</a></li>
+                                            <li> <a href="etkinlikler">Etkinlikler</a></li>
                                             <li> <a href="about.html">Teşvik ve Hibeler</a></li>
                                             <li> <a href="about.html">Sosyal Sorumluluk</a></li>
                                         </ul>
