@@ -9,7 +9,7 @@
 		<div class="navigation">
 			<ul class="menu js__accordion">
 				<li>
-					<a class="waves-effect" href="index.html"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Anasayfa</span></a>
+					<a class="waves-effect" href="{{Route('panel')}}"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Anasayfa</span></a>
 				</li>
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-flower"></i><span>Ayarlar</span><span class="menu-arrow fa fa-angle-down"></span></a>
@@ -23,13 +23,8 @@
 					<!-- /.sub-menu js__content -->
 				</li>
                 <li>
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-flower"></i><span>Slider</span><span class="menu-arrow fa fa-angle-down"></span></a>
-					<ul class="sub-menu js__content">
-						<li><a href="icons-font-awesome-icons.html">Slider Ekle</a></li>
-						<li><a href="icons-fontello.html">Slidelar</a></li>
+					<a class="waves-effect parent-item " href="{{route('slider')}}"><i class="menu-icon mdi mdi-flower"></i><span>Slider</span></span></a>
 
-					</ul>
-					<!-- /.sub-menu js__content -->
 				</li>
 
 				<li>
@@ -50,12 +45,9 @@
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-cube-outline"></i><span>Sayfalar   </span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
-						<li><a href="ui-notification.html">Notification</a></li>
-						<li><a href="profile.html">Profile</a></li>
-						<li><a href="ui-range-slider.html">Range Slider</a></li>
-						<li><a href="ui-sweetalert.html">Sweet Alert</a></li>
-						<li><a href="ui-treeview.html">Tree view</a></li>
-						<li><a href="widgets.html">Widget</a></li>
+						<li><a href="{{Route('panel-sayfalar')}}">Tüm Sayfalar</a></li>
+						<li><a href="{{route('sabitsayfalar')}}">Başkanın Mesajı</a></li>
+
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>

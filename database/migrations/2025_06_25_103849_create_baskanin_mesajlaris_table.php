@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('baskanin_mesajlaris', function (Blueprint $table) {
             $table->id();
+            $table->string('menu_adi');
+            $table->string('baslik');
+            $table->string('resim')->nullable();
             $table->longText('mesaj')->nullable();
             $table->timestamps();
         });

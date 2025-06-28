@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class BaskaninMesajlari extends Model
 {
-public static function yorum($veri){
 
 
-}
+        protected $table = 'baskanin_mesajlaris';
+    protected $fillable = ['menu_adi', 'baslik', 'mesaj'];
 
     use HasFactory;
 }

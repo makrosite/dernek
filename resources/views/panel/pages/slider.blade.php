@@ -1,11 +1,15 @@
 @extends('panel.panel-layout')
 
 @section('admin-main')
-
+@if(session('success'))
+  <div class="alert alert-success" role="alert">
+    {{ session('success') }}
+  </div>
+@endif
 <div class="box-content card white">
 					<div class="col-lg-6 col-xs-12">
 				<div class="box-content card white">
-					<h4 class="box-title">Basic example</h4>
+					<h4 class="box-title">SLİDER YÖNETİMİ</h4>
 					<!-- /.box-title -->
 					<div class="card-content">
 						<form action="{{Route('slider-ekle')}}" method="post" enctype="multipart/form-data">
@@ -36,7 +40,7 @@
 								<input name="resim" type="file" id="exampleInputFile">
 							</div>
 
-							<button type="submit" class="btn btn-primary btn-sm waves-effect waves-light">Submit</button>
+							<button type="submit" class="btn btn-primary btn-sm waves-effect waves-light">KAYDET</button>
 						</form>
 					</div>
 					<!-- /.card-content -->
@@ -44,18 +48,61 @@
 				<!-- /.box-content -->
 			</div>
 
+
+
                <div class="col-lg-12 col-xs-12">
-                @if(isset($slider) && count($slider) > 0)
+<table class="table table-bordered">
+
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>RESİM</th>
+								<th>BAŞLIK</th>
+								<th>METİN</th>
+                                <th>DURUM</th>
+                                <th>İŞLEM</th>
+							</tr>
+						</thead>
+						<tbody>
+                            @if(isset($slider) && count($slider) > 0)
                     @foreach ($slider as $slide)
-                        <div style="margin:20px;" class="mb-3">
-                            <img width="250" height="250" src="{{ asset('slider/' . $slide->resim) }}" alt="Slider Image" style="max-width:100%; height:auto;">
-							<strong>{{$slide->baslik}}</strong>
-                            <a href="{{route('slide-sil',['id'=>$slide->id])}}">SİL</a>
-                        </div>
-                    @endforeach
+							<tr>
+								<th style="width:   30px;" scope="row">{{$slide->id}}</th>
+								<td style="width:130px;">  <img width="100" height="60" src="{{ asset('slider/' . $slide->resim) }}" alt="Slider Image" style="max-width:100%; height:auto;"></td>
+								<td>{{$slide->baslik}}</td>
+								<td>{{$slide->metin}}</td>
+                                <td style="width:130px;">
+
+
+                                @if($slide->durum ==1)
+
+
+                                        <strong style="color:green;">AKTİF</strong>
+                                        @else
+                                        <strong style="color:red;">PASİF</strong>
+
+                                @endif
+
+
+                                </td>
+                                <td style="width:130px;">
+                                   <a href="{{route('slide-duzenle',['id'=>$slide->id])}}"> <button type="button" class="btn btn-info btn-circle waves-effect waves-light"><i class="ico fa fa-pencil"></i></button></a>
+                                    <a href="{{route('slide-sil',['id'=>$slide->id])}}"><button type="button" class="btn btn-danger btn-circle waves-effect waves-light"><i class="ico fa fa-remove"></i></button></a>
+                                </td>
+							</tr>
+
+
+                                                @endforeach
                 @else
                     <p>Veritabanında herhangi bir slider resmi bulunamadı.</p>
                 @endif
+						</tbody>
+					</table>
+
+
+
+
+
             </div>
 					<!-- /.card-content -->
 				</div>

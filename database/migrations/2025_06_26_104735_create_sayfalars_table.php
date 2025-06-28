@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('baslik');
             $table->string('metin')->nullable();
             $table->integer('durum')->default(1);
-            $table->string('resim');
+            $table->string('resim')->nullable();
             $table->timestamps();
         });
     }

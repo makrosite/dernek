@@ -3,7 +3,13 @@
     <head>
         <!-- meta tag -->
         <meta charset="utf-8">
-        <title>Home | Kbiz - Modern Business and Corporate HTML Template</title>
+ @php
+use App\Models\SiteAyar;
+
+$site = SiteAyar::SiteAyar();
+
+@endphp
+        <title>{{$site->sitebasligi}}</title>
         <meta name="description" content="">
         <!-- responsive tag -->
         <meta http-equiv="x-ua-compatible" content="ie=edge">
