@@ -6,6 +6,9 @@
     {{ session('success') }}
   </div>
 @endif
+@php
+    use App\Models\Kurum;
+@endphp
 
 <div class="box-content card white">
 					<div class="col-lg-6 col-xs-12">
@@ -21,7 +24,7 @@
 								<label for="exampleInputPassword1">KURUM</label>
                                <select name="kurum"value="1" class="form-control" aria-label="Default select example">
                                 <option value="2">SEÇİNİZ</option>
-                                 @php use App\Models\Kurum; $kurumlar =  Kurum::kurumlar();  @endphp
+                                 @php  $kurumlar =  Kurum::kurumlar();  @endphp
                                         @foreach ($kurumlar as $kurum  )
                                          <option value="{{$kurum->id}}">{{$kurum->baslik}}</option>
                                         @endforeach
