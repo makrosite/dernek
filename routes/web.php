@@ -1,22 +1,23 @@
 <?php
 
 
-use App\Http\Controllers\BaskaninMesajlariController;
-use App\Http\Controllers\HaberController;
-use App\Http\Controllers\IsbirlikleriController;
-use App\Http\Controllers\KurumController;
-use App\Http\Controllers\SabitSayfalarController;
-use App\Http\Controllers\SayfalarController;
-use App\Http\Controllers\SliderController;
-use App\Http\Controllers\TarihceController;
-use App\Http\Controllers\TesvikController;
-use App\Http\Controllers\UyelerController;
-use App\Http\Controllers\YonetimKuruluModelController;
+use App\Http\Controllers\BagisController;
 use App\Models\Isbirlikleri;
 use App\Models\YonetimKuruluModel;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HaberController;
+use App\Http\Controllers\KurumController;
+use App\Http\Controllers\SliderController;
+use App\Http\Controllers\TesvikController;
+use App\Http\Controllers\UyelerController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TarihceController;
+use App\Http\Controllers\SayfalarController;
 use App\Http\Controllers\HakkimizdaController;
+use App\Http\Controllers\IsbirlikleriController;
+use App\Http\Controllers\SabitSayfalarController;
+use App\Http\Controllers\YonetimKuruluController;
+use App\Http\Controllers\BaskaninMesajlariController;
 
 
 
@@ -35,7 +36,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', function () {return view('pages.anasayfa');})->name('anasayfa');
 Route::get('/hakkinda',[HakkimizdaController::class,'index'])->name('hakkinda');
-Route::get('/yonetim-kurulu',[YonetimKuruluModelController::class,'index'])->name('yonetim');
+Route::get('/yonetim-kurulu',[YonetimKuruluController::class,'index'])->name('yonetim');
 Route::get('/baskan',[BaskaninMesajlariController::class,'index'])->name('baskan');
 Route::get('/tarihce',[TarihceController::class,'index'])->name('tarihce');
 Route::get('/uyeler',[UyelerController::class,'index'])->name('uyelerimiz');
@@ -135,6 +136,20 @@ Route::post('/yonetim/uyeguncellepost/{id}',[UyelerController::class,'uyeguncell
 
 Route::get('/yonetim/uyesil/{id}',[UyelerController::class,'uyesil'])->name('uyesil');
 Route::get('yonetim/uyedurum/{id}',[UyelerController::class,'durum'])->name('uyedurumu');
+// YÖNETİM KURULU
+//Yönetim Kurulu Bilgiler
+Route::get('/yonetim/kurul',[YonetimKuruluController::class,'panel'])->name('panelkurul');
+// ekle
+Route::post('/yonetim/kurulekle',[YonetimKuruluController::class,'ekle'])->name('panelkurulekle');
+// sil
+Route::get('/yonetim/kurulsil/{id}',[YonetimKuruluController::class,'sil'])->name('panelkurulsil');
+// BAĞIŞLAR
+
+Route::get('/yonetim/bagislar',[BagisController::class,'panel'])->name('panelbagis');
+Route::get('/yonetim/bagissil/{id}',[BagisController::class,'sil'])->name('bagissil');
+Route::post('/yonetim/bagisekle',[BagisController::class,'ekle'])->name('bagisekle');
+Route::get('/yonetim/bagisdurum/{id}',[BagisController::class,'durum'])->name('bagisdurum');
+
 
 
 

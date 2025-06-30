@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\File;
 class UyelerController extends Controller
 {
      public function index(){
-return "uye";
+
         return view('pages.uyeler');
     }
     public function panel(){

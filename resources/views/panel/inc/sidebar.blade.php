@@ -22,15 +22,21 @@
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>
+
                 <li>
 					<a class="waves-effect parent-item " href="{{route('slider')}}"><i class="menu-icon mdi mdi-flower"></i><span>Slider</span></span></a>
-
 				</li>
+
                 <li>
 					<a class="waves-effect parent-item " href="{{route('panelkurumlar')}}"><i class="menu-icon mdi mdi-flower"></i><span>Kurumlar</span></span></a>
+				</li>
+
+                <li>
+					<a class="waves-effect parent-item " href="{{route('panelkurumlar')}}"><i class="menu-icon mdi mdi-flower"></i><span>Hizmetler</span></span></a>
 
 				</li>
-                                <li>
+
+                <li>
 					<a class="waves-effect parent-item " href="{{route('panelisbirlikleri')}}"><i class="menu-icon mdi mdi-flower"></i><span>iş Birlikleri </span></span></a>
 
 				</li>
@@ -58,28 +64,14 @@
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-buffer"></i><span>Üyeler & Yönetim Kurulu</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="{{Route('uyelerpanel')}}">Üyeler</a></li>
-						<li><a href="ui-cards.html">Cards</a></li>
-						<li><a href="ui-checkbox-radio.html">Checkboxs-Radios</a></li>
-						<li><a href="ui-components.html">Components</a></li>
-						<li><a href="ui-draggable-cards.html">Draggable Cards</a></li>
-						<li><a href="ui-modals.html">Modals</a></li>
-						<li><a href="ui-typography.html">Typography</a></li>
+						<li><a href="{{Route('panelkurul')}}">Yönetim Kurulu</a></li>
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>
 
 				<li>
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-pencil-box"></i><span>Bağış Yönetimi</span><span class="menu-arrow fa fa-angle-down"></span></a>
-					<ul class="sub-menu js__content">
-						<li><a href="form-elements.html">General Elements</a></li>
-						<li><a href="form-advanced.html">Advanced Form</a></li>
-						<li><a href="form-fileupload.html">Form Uploads</a></li>
-						<li><a href="form-validation.html">Form Validation</a></li>
-						<li><a href="form-wizard.html">Form Wizard</a></li>
-						<li><a href="form-wysiwig.html">Wysiwig Editors</a></li>
-						<li><a href="form-xeditable.html">X-editable</a></li>
-					</ul>
-					<!-- /.sub-menu js__content -->
+					<a class="waves-effect parent-item js__control" href="{{Route('panelbagis')}}"><i class="menu-icon mdi mdi-pencil-box"></i><span>Bağış Yönetimi</span></span></a>
+
 				</li>
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-table"></i><span>Tables</span><span class="menu-arrow fa fa-angle-down"></span></a>
