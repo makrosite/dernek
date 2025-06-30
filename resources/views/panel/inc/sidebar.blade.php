@@ -26,19 +26,22 @@
 					<a class="waves-effect parent-item " href="{{route('slider')}}"><i class="menu-icon mdi mdi-flower"></i><span>Slider</span></span></a>
 
 				</li>
+                <li>
+					<a class="waves-effect parent-item " href="{{route('panelkurumlar')}}"><i class="menu-icon mdi mdi-flower"></i><span>Kurumlar</span></span></a>
+
+				</li>
+                                <li>
+					<a class="waves-effect parent-item " href="{{route('panelisbirlikleri')}}"><i class="menu-icon mdi mdi-flower"></i><span>iş Birlikleri </span></span></a>
+
+				</li>
 
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-chart-bar"></i><span>Haber & Duyuru</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
-						<li><a href="chart-3d.html">3D Charts</a></li>
-						<li><a href="chart-chartist.html">Chartist Charts</a></li>
-						<li><a href="chart-chartjs.html">Chartjs Chart</a></li>
-						<li><a href="chart-dynamic.html">Dynamic Chart</a></li>
-						<li><a href="chart-flot.html">Flot Chart</a></li>
-						<li><a href="chart-knob.html">Knob Chart</a></li>
-						<li><a href="chart-morris.html">Morris Chart</a></li>
-						<li><a href="chart-sparkline.html">Sparkline Chart</a></li>
-						<li><a href="chart-other.html">Other Chart</a></li>
+						<li><a href="{{Route('panel-haberler')}}">Haberler</a></li>
+						<li><a href="{{Route('panelDuyuru')}}">Duyurular</a></li>
+						<li><a href="{{Route('paneletkinlik')}}">Etkinlikler</a></li>
+						<li><a href="{{Route('paneltesvik')}}">Teşvik & Hibeler</a></li>
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>
@@ -54,7 +57,7 @@
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-buffer"></i><span>Üyeler & Yönetim Kurulu</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
-						<li><a href="ui-buttons.html">Buttons</a></li>
+						<li><a href="{{Route('uyelerpanel')}}">Üyeler</a></li>
 						<li><a href="ui-cards.html">Cards</a></li>
 						<li><a href="ui-checkbox-radio.html">Checkboxs-Radios</a></li>
 						<li><a href="ui-components.html">Components</a></li>

@@ -5,8 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Uyeler extends Model
+class Tesvik extends Model
 {
+    public static function tesvikler(){
+          return self::all();
+
+
+    }
 
 
 

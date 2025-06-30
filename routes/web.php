@@ -3,12 +3,16 @@
 
 use App\Http\Controllers\BaskaninMesajlariController;
 use App\Http\Controllers\HaberController;
+use App\Http\Controllers\IsbirlikleriController;
+use App\Http\Controllers\KurumController;
 use App\Http\Controllers\SabitSayfalarController;
 use App\Http\Controllers\SayfalarController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TarihceController;
+use App\Http\Controllers\TesvikController;
 use App\Http\Controllers\UyelerController;
 use App\Http\Controllers\YonetimKuruluModelController;
+use App\Models\Isbirlikleri;
 use App\Models\YonetimKuruluModel;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
@@ -69,6 +73,79 @@ Route::post('sayfaguncellepost/{id}',[SayfalarController::class,'PanelSayfaGunce
 Route::get('/yonetim/sayfalar/sil/{id}',[SayfalarController::class,'PanelSayfaSil'])->name('panel-sayfa-sil');
 Route::get('/yonetim//sabitsayfalar',[SabitSayfalarController::class,'index'])->name('sabitsayfalar');
 Route::post('yonetin/baskaninmesaji',[BaskaninMesajlariController::class,'guncelle'])->name('baskanguncelle');
+// haber yönetimi
+Route::get('panel/haberler',[HaberController::class,'haberler'])->name('panel-haberler');
+// haber düzenleme
+Route::get('/yonetim/haber-duzenle/{id}',[HaberController::class,'haberduzenle'])->name('haber-duzenle');
+Route::post('yonetim/haber-duzenlePost/{id}',[HaberController::class,'haberduzenlePost'])->name('haber-duzenlePost');
+// haber Sil
+Route::get('yonetim/habersil/{id}',[HaberController::class,'haberSil'])->name('habersil');
+// haber ekle
+Route::get('/yonetim/haberekle',[HaberController::class,'HaberEkle'])->name('haberekle');
+Route::post('/yonetim/habereklePost',[HaberController::class,'HaberEklePost'])->name('habereklePost');
+
+
+// DUYURULAR ,
+// duyuru getir
+Route::get('/yonetim/duyuru',[HaberController::class,'panelDuyurular'])->name('panelDuyuru');
+// Duyuru ekle alanı
+Route::get('/yonetim/duyuruekle',[HaberController::class,'DuyuruEkle'])->name('duyuruekle');
+Route::post('/yonetim/duyurueklepost',[HaberController::class,'DuyuruEklePost'])->name('duyurueklepost');
+// Duyuru guncelle
+Route::get('/yonetim/duyuruguncelle/{id}',[HaberController::class,'DuyuruGuncelle'])->name('duyuruguncelle');
+Route::post('/yonetim/duyuruguncellepost/{id}',[HaberController::class,'DuyuruGuncellePost'])->name('duyuruguncellepost');
+// Duyuru sil
+Route::get('/yonetim/duyurusil/{id}',[HaberController::class,'DuyuruSil'])->name('duyurusil');
+
+// ETKİNLİKLER
+// eTKİNLİK getir
+Route::get('/yonetim/etkinlik',[HaberController::class,'panelEtkinlik'])->name('paneletkinlik');
+// eTKİNLİK ekle alanı
+Route::get('/yonetim/etkinlikekle',[HaberController::class,'EtkinlikEkle'])->name('etkinlikekle');
+Route::post('/yonetim/etkinlikeklepost',[HaberController::class,'EtkinlikEklePost'])->name('etkinlikeklepost');
+// eTKİNLİK guncelle
+Route::get('/yonetim/etkinlikguncelle/{id}',[HaberController::class,'EtkinlikGuncelle'])->name('etkinlikguncelle');
+Route::post('/yonetim/etkinlikguncellepost/{id}',[HaberController::class,'EtkinlikGuncellePost'])->name('etkinlikguncellepost');
+// eTKİNLİK sil
+Route::get('/yonetim/etkinliksil/{id}',[HaberController::class,'EtkinlikSil'])->name('etkinliksil');
+
+// KURUMLAR
+Route::get('/yonetim/Kurumlar',[KurumController::class,'index'])->name('panelkurumlar');
+// ekle
+Route::post('/yonetim/Kurumekle',[KurumController::class,'KurumEklePost'])->name('kurumelkepost');
+// Kurum sil
+Route::get('/yonetim/kurumsil/{id}',[KurumController::class,'KurumSil'])->name('kurumsil');
+
+/// teşvikler hibeler
+Route::get('/yonetim/tesvik',[TesvikController::class,'panel'])->name('paneltesvik');
+Route::post('/yonetim/tesvikekle',[TesvikController::class,'ekle'])->name('tesvikekle');
+Route::get('/yonetim/tesviksil/{id}',[TesvikController::class,'tesviksil'])->name('tesviksil');
+
+// İŞBİRLİKLERİ
+Route::get('/yonetim/isbirlikleri',[IsbirlikleriController::class,'panel'])->name('panelisbirlikleri');
+Route::post('/yonetim/isbirlikleriekle',[IsbirlikleriController::class,'ekle'])->name('isbirlikleriekle');
+Route::get('/yonetim/isbirliklerisil/{id}',[IsbirlikleriController::class,'sil'])->name('isbirliklerisil');
+// UYELER
+Route::get('/yonetim/uyeler',[UyelerController::class,'panel'])->name('uyelerpanel');
+Route::get('/yonetim/uyeekle',[UyelerController::class,'ekle'])->name('uyeekle');
+Route::post('/yonetim/uyeeklepost',[UyelerController::class,'eklepost'])->name('uyeeklepost');
+
+Route::get('/yonetim/uyeguncelle/{id}',[UyelerController::class,'uyeguncelle'])->name('uyeguncelle');
+Route::post('/yonetim/uyeguncellepost/{id}',[UyelerController::class,'uyeguncellepost'])->name('uyeguncellepost');
+
+Route::get('/yonetim/uyesil/{id}',[UyelerController::class,'uyesil'])->name('uyesil');
+Route::get('yonetim/uyedurum/{id}',[UyelerController::class,'durum'])->name('uyedurumu');
+
+
+
+
+
+
+
+
+
+
+
 
 
 

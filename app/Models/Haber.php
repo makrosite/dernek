@@ -14,12 +14,19 @@ class Haber extends Model
 public static function TekHaber($id){
 
     return  self::where('id',$id)->first();
+}
 
+
+
+public static function haberler(){
+        return self::all();
+}
+
+public static function haberekle($request){
 
 
 
 }
-
 
 
 

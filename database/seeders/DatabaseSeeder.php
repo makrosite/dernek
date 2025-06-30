@@ -20,6 +20,10 @@ class DatabaseSeeder extends Seeder
              $this->call(IsbirlikleriSeeder::class);
              $this->call(class: SayfalarSeeder::class);
              $this->call(class: SiteAyarSeeder::class);
+             $this->call(class: EtkinliklerSeeder::class);
+             $this->call(class: KurumSeeder::class);
+              $this->call(class: TesvikSeeder::class);
+
 
     }
 }

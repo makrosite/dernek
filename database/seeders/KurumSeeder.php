@@ -5,20 +5,19 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DuyuruSeeder extends Seeder
+class KurumSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-    \DB::table('duyurus')->insert([
+         \DB::table('kurums')->insert([
         [
-            'baslik' => 'Yeni Web Sitemiz Yayında!',
-            'metin' => 'Kurumsal web sitemiz modern arayüzüyle yayına alınmıştır.',
-            'resim' =>'ornek.jpg',
+            'baslik' => 'Kosgeb',
+            'resim' =>'ornek.png',
             'created_at' => now(),
-            'updated_at' => now(),
+
         ]
 
 
