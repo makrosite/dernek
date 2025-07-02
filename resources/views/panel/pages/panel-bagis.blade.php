@@ -6,6 +6,10 @@
     {{ session('success') }}
   </div>
 @endif
+@php
+ use App\Models\Bankalar;
+  $bankaGetir = Bankalar::all();
+ @endphp
 
 <div class="box-content card white">
     <h4 class="box-title">BAĞIŞ YÖNETİMİ</h4>
@@ -22,12 +26,20 @@
                         <input type="text" name="adsoyad" class="form-control" id="input1" placeholder="Ad Soyad">
                     </div>
                 </div>
+
                 <div class="col-md-3">
                     <div class="form-group">
 
-                        <input type="text" name="banka" class="form-control" id="input2" placeholder="Banka">
+                        <select name="durum"  class="form-control" aria-label="Default select example">
+                                <option value="0">SEÇİNİZ</option>
+                                @foreach ($bankaGetir as $bank )
+                                <option value="{{$bank->id}}">{{$bank->bankaadi}}</option>
+                                @endforeach
+
+                                </select>
                     </div>
                 </div>
+
                 <div class="col-md-3">
                     <div class="form-group">
 
@@ -36,7 +48,6 @@
                 </div>
 
             </div>
-
                         <div class="row">
                 <div class="col-md-8">
                     <div class="form-group">
@@ -100,7 +111,21 @@
                              role="row" class="odd">
 								<td class="sorting_1">{{$b->adsoyad}}</td>
 								<td>{{$b->aciklama}}</td>
-								<td>{{$b->banka}}</td>
+								<td>
+                                    @php
+                                       $bankacek = Bankalar::where('id',$b->banka)->first();
+
+                                       echo $bankacek->bankaadi;
+
+
+
+
+                                    @endphp
+
+
+
+
+                                </td>
 								<td>{{$b->tutar}} ₺</td>
 								<td>{{$b->created_at->format('d.m.Y')}}</td>
 								<td style="text-align:center;">

@@ -48,6 +48,24 @@ return view('panel.pages.duyrular');
 
     }// duyuru ekle panel
     public function DuyuruEklePost(request $request){
+
+        if($request->resim==null){
+
+  $kaydet = Duyuru::insert([
+            "baslik"=> $request->baslik,
+            "metin"=> $request->metin,
+
+         ]);
+         if($kaydet){
+            return redirect()->route("panelDuyuru")->with("success","duyuru Başarıyla Eklendi");
+         }else{
+            return redirect()->route("panelDuyuru")->with("error","duyuru Eklenemedi");
+         }
+
+
+        }else{
+
+
                  $resimadi= rand(0,1000).".".$request->resim->getClientOriginalExtension();
          $yukle = $request->resim->move(public_path("duyuru"), $resimadi);
          $kaydet = Duyuru::insert([
@@ -61,7 +79,7 @@ return view('panel.pages.duyrular');
             return redirect()->route("panelDuyuru")->with("error","duyuru Eklenemedi");
          }
 
-
+}
 
     }// duyuru ekle post
 

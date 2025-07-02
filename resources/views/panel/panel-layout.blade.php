@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Blank Page - Zeiss Template</title>
+	<title>EGESİAD WEB SİTESİ YÖNETİM PANELİ</title>
 
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="{{asset('panel/assets/styles/style.min.css')}}">
@@ -35,7 +35,7 @@
 <div class="fixed-navbar">
 	<div class="pull-left">
 		<button type="button" class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
-		<h1 class="page-title">Blank Page</h1>
+		<h1 class="page-title">EGESİAD WEB SİTESİ YÖNETİM PANELİ</h1>
 		<!-- /.page-title -->
 	</div>
 	<!-- /.pull-left -->

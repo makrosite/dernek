@@ -95,6 +95,7 @@ $ib = Isbirlikleri::all();
 
                                     <td style="width:130px;">
                                         <a href="{{route('isbirliklerisil',['id'=>$i->id])}}"><button type="button" class="btn btn-danger btn-circle waves-effect waves-light"><i class="ico fa fa-remove"></i></button></a>
+
                                     </td>
 							</tr>
 

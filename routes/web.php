@@ -1,7 +1,12 @@
 <?php
 
 
+use App\Http\Controllers\AyarlarController;
 use App\Http\Controllers\BagisController;
+use App\Http\Controllers\BankalarController;
+use App\Http\Controllers\HizmetController;
+use App\Http\Controllers\MesajlarController;
+use App\Http\Controllers\SssController;
 use App\Models\Isbirlikleri;
 use App\Models\YonetimKuruluModel;
 use Illuminate\Support\Facades\Route;
@@ -145,10 +150,50 @@ Route::post('/yonetim/kurulekle',[YonetimKuruluController::class,'ekle'])->name(
 Route::get('/yonetim/kurulsil/{id}',[YonetimKuruluController::class,'sil'])->name('panelkurulsil');
 // BAĞIŞLAR
 
-Route::get('/yonetim/bagislar',[BagisController::class,'panel'])->name('panelbagis');
+Route::get('/yonetim/bagis/',[BagisController::class,'panel'])->name('panelbagis');
 Route::get('/yonetim/bagissil/{id}',[BagisController::class,'sil'])->name('bagissil');
 Route::post('/yonetim/bagisekle',[BagisController::class,'ekle'])->name('bagisekle');
 Route::get('/yonetim/bagisdurum/{id}',[BagisController::class,'durum'])->name('bagisdurum');
+
+// HİZMETLERİMİZ
+Route::get('/yonetim/hizmet/',[HizmetController::class,'panel'])->name('panelhizmet');
+Route::post('/yonetim/hizmetekle',[HizmetController::class,'ekle'])->name('hizmetekle');
+Route::get('/yonetim/hizmetsil/{id}',[HizmetController::class,'sil'])->name('hizmetsil');
+Route::get('/yonetim/hizmetdurum/{id}',[HizmetController::class,'durum'])->name('hizmetdurum');
+
+// site ayarları
+Route::get('yonetim/genelayarlar',[AyarlarController::class,'genelayarlar'])->name('genelayarlar');
+Route::post('yonetim/genelayarlarpost',[AyarlarController::class,'genelayarlarpost'])->name('genelayarlarpost');
+Route::get('yonetim/iletisimayar',[AyarlarController::class,'iletisimayar'])->name('iletisimayar');
+Route::post('yonetim/iletisimayarpost',[AyarlarController::class,'iletisimayarpost'])->name('iletisimayarpost');
+Route::get('yonetim/smayar',[AyarlarController::class,'smayar'])->name('smayar');
+Route::post('yonetim/smayarpost',[AyarlarController::class,'smayarpost'])->name('smayarpost');
+Route::get('yonetim/logoayar',[AyarlarController::class,'logoayar'])->name('logoayar');
+Route::post('yonetim/logopost',[AyarlarController::class,'logopost'])->name('logopost');
+Route::get('yonetim/logosil/{id}',[AyarlarController::class,'logosil'])->name('logosil');
+// BANKALAR
+Route::get('yonetim/bankalar',[BankalarController::class,'panel'])->name('bankalarpanel');
+Route::get('yonetim/bankasil/{id}',[BankalarController::class,'sil'])->name('bankasil');
+Route::get('yonetim/bankadurum/{id}',[BankalarController::class,'durum'])->name('bankadurum');
+Route::post('yonetim/bankaekle',[BankalarController::class,'ekle'])->name('bankaekle');
+
+//sıkça sorulan sorular
+Route::get( 'yonetim/sss',[SssController::class,'panel'])->name('ssspanel');
+Route::post('yonetim/ekle',[SssController::class,'eklepost'])->name('ssspost');
+Route::get('yonetim/sil/{id}',[SssController::class,'sil'])->name('sssSil');
+
+//Mesajlşar
+Route::get( 'yonetim/mesajlar',[MesajlarController::class,'panel'])->name('mesajlarpanel');
+Route::get('yonetim/mesajgoster/{id}',[MesajlarController::class,'goster'])->name('mesajgoster');
+Route::get('yonetim/mesajsil/{id}',[MesajlarController::class,'sil'])->name('mesajsil');
+
+
+
+
+
+
+
+
 
 
 

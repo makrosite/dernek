@@ -36,7 +36,7 @@
                         <nav>
                             <!-- Menu Toggle btn-->
                             <div class="menu-toggle">
-                                <div class="logo"><a href="{{Route('anasayfa')}}" class="logo-text"><span class="primary-color normal">K</span>biz.</a></div>
+                                <div class="logo"><a href="{{Route(name: 'anasayfa')}}" class="logo-text"><span class="primary-color normal">K</span>biz.</a></div>
                                 <div class="searchbar-part hide-desktop">
                                     <div class="searchbar" id="icon_searchs">
                                         <a href="#"><span aria-hidden="true" class="icon_search"></span>ddddd</a>
