@@ -87,7 +87,7 @@
                                             {{-- <li> <a href="about.html">Sosyal Sorumluluk</a></li> --}}
                                         </ul>
                                     </li>
-                                    <li> <a href="blog.html">İletişim</a> </li>
+                                    <li> <a href="{{Route('iletisim')}}">İletişim</a> </li>
                                 <div class="searchbar-part">
                                     <div class="searchbar" id="icon_search">
                                         <a href="#"><span aria-hidden="true" class="icon_search"></span> Search... </a>

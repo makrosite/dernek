@@ -160,6 +160,14 @@ $duyuru = Duyuru::where("id",$id)->first();
 
     ///ETKİNLİKLER //////////////////////////////////////////////////////////////////
 
+    public function etkinliksayfa(){
+        $etkinlikler = Etkinlikler::orderBy('id','desc')->get();
+        return view('pages.etkinlikler',compact('etkinlikler'));
+
+
+
+    }
+
         public function panelEtkinlik(){
 
 

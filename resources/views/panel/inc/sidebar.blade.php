@@ -48,6 +48,11 @@
 
 				</li>
 
+                <li>
+					<a class="waves-effect parent-item " href="{{route('mesajlarpanel')}}"><i class="menu-icon mdi mdi-flower"></i><span>Mesajlar</span></span></a>
+
+				</li>
+
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-chart-bar"></i><span>Haber & Duyuru</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
@@ -81,10 +86,10 @@
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-table"></i><span>Modüller</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="{{route('ssspanel')}}">S.S.S Yönetimi</a></li>
-						<li><a href="{{route('mesajlarpanel')}}">Mesajlar</a></li>
-						<li><a href="tables-responsive.html">Responsive Tables</a></li>
-						<li><a href="tables-editable.html">Editable Tables</a></li>
+
+
 					</ul>
+                       <li><a href="#"> <i class="menu-icon mdi mdi-cash"></i>PAYTR Sanal Pos</a></li>
 					<!-- /.sub-menu js__content -->
 				</li>
 

@@ -5,6 +5,7 @@ use App\Http\Controllers\AyarlarController;
 use App\Http\Controllers\BagisController;
 use App\Http\Controllers\BankalarController;
 use App\Http\Controllers\HizmetController;
+use App\Http\Controllers\IletisimController;
 use App\Http\Controllers\MesajlarController;
 use App\Http\Controllers\SssController;
 use App\Models\Isbirlikleri;
@@ -46,11 +47,15 @@ Route::get('/baskan',[BaskaninMesajlariController::class,'index'])->name('baskan
 Route::get('/tarihce',[TarihceController::class,'index'])->name('tarihce');
 Route::get('/uyeler',[UyelerController::class,'index'])->name('uyelerimiz');
 Route::get('/haberler',[HaberController::class,'index'])->name('haberler');
+Route::get('/iletisim',[IletisimController::class,'index'])->name('iletisim');
 Route::get('/duyurular',[HaberController::class,'duyurular'])->name('duyurular');
-Route::get('/etkinlikler',[HaberController::class,'etkinlikler'])->name('etkinlikler');
+Route::get('/etkinlikler',[HaberController::class,'etkinliksayfa'])->name('etkinlikler');
 Route::get('/haber/{id}',[HaberController::class,'haberdetay'])->name('haberdetay');
 Route::get('/isbirlikleri',[HaberController::class,'isbirlikleri'])->name('isbirlikleri');
 Route::get('/sayfa/{id}',[SayfalarController::class,'index'])->name('sayfa');
+Route::post('/iletisim',[MesajlarController::class,'iletisim'])->name('iletisimform');
+
+
 
 
 
@@ -185,6 +190,7 @@ Route::get('yonetim/sil/{id}',[SssController::class,'sil'])->name('sssSil');
 //Mesajlşar
 Route::get( 'yonetim/mesajlar',[MesajlarController::class,'panel'])->name('mesajlarpanel');
 Route::get('yonetim/mesajgoster/{id}',[MesajlarController::class,'goster'])->name('mesajgoster');
+
 Route::get('yonetim/mesajsil/{id}',[MesajlarController::class,'sil'])->name('mesajsil');
 
 

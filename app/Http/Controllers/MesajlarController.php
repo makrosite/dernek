@@ -12,7 +12,12 @@ class MesajlarController extends Controller
     }
     public function goster($id){
         $mesaj = Mesajlar::find($id);
+        $okundu = Mesajlar::where('id', $mesaj->id)->update(['okundu'=>1]);
+        if($okundu){
 return view('panel.pages.mesaj',compact('mesaj'));
+        }
+
+
     }
     public function sil($id){
 
@@ -20,6 +25,12 @@ return view('panel.pages.mesaj',compact('mesaj'));
         if($mesajsil){
         return redirect()->back()->with('success','Başarıyla Silindi');
           }
+        }
+
+        public function  iletisim(request $request){
+
+
+
         }
 
 }

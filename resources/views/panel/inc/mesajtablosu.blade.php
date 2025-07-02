@@ -5,7 +5,7 @@
 
 <div class="col-lg-12 col-xs-12">
 				<div class="box-content">
-					<h4 class="box-title">Bağışlar</h4>
+					<h4 class="box-title">Mesajlar</h4>
 					<!-- /.box-title -->
 
 					<!-- /.dropdown js__dropdown -->
@@ -33,19 +33,15 @@
                                 <td>{{$b->konu}} </td>
 								<td>{{$b->created_at->format('d.m.Y')}}</td>
                                 @if ($b->okundu==1)
-                                <td class="text-success">ONAYLANDI</td>
-
-                                @elseif($b->okundu==2)
-                                <td class="text-warning">BEKLEMEDE</td>
-
+                                <td class="text-success">OKUNDU</td>
                                 @else
-                        <td class="text-danger">İPTAL EDİLDİ</td>
+                        <td class="text-danger">OKUNMADI</td>
 
                                 @endif
 
                                 <td style="width:7%;">
                                     <a href="{{route('mesajgoster',['id'=>$b->id])}}"><i class="fa fa-search"> </i></a>
-                                    <a href="{{route('mesajsil',['id'=>$b->id])}}" style="margin-left:10px;"> <i class="fa fa-remove danger "></i></a>
+                                    <a href="{{route('mesajsil',['id'=>$b->id])}}" style="margin-left:10px; color:red"> <i class="fa fa-remove danger "></i></a>
 
                                 </td>
 							</tr>
