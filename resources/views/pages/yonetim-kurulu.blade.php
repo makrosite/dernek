@@ -46,24 +46,31 @@
     }
 }
 </style>
+@php
+    use App\Models\YonetimKurulu;
+    $yonetimkurulu=YonetimKurulu::all();
+    use App\Models\BaskaninMesajlari;
 
+$baskan = BaskaninMesajlari::find(1);
+@endphp
 <div class="back-wrapper">
     <div class="back-wrapper-inner">
         <!-- Back Breadcrumbs Start Here -->
         <div class="back-breadcrumbs">
             <div class="breadcrumbs-wrap">
-                <img class="desktop" src="assets/images/breadcrumbs/banner-inner.jpg" alt="Breadcrumbs Image">
-                <img class="mobile" src="assets/images/breadcrumbs/banner-inner-mobile.jpg" alt="Breadcrumbs Image">
+                @php
+    use App\Models\Ayarlar;
+    $resim = Ayarlar::find(1);
+    $bc = $resim->bc;
+@endphp
+                <img class="desktop" src="{{ asset('logo/' . $bc) }}" alt="Breadcrumbs Image" style="width:100%; height:430px; object-fit:cover; object-position:center;">
+                <img class="mobile" src="{{ asset('logo/' . $bc) }}" alt="Breadcrumbs Image" style="width:100%; height:230px; object-fit:cover; object-position:center;">
+
                 <div class="breadcrumbs-inner">
                     <div class="container">
                         <div class="breadcrumbs-text">
-                            <h1 class="breadcrumbs-title">About Us</h1>
-                            <div class="back-nav">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li>About Us</li>
-                                </ul>
-                            </div>
+                            <h1 class="breadcrumbs-title">Yönetim Kurulumuz</h1>
+
                         </div>
                     </div>
                 </div>
@@ -82,8 +89,8 @@
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card shadow-lg border-0 h-100 text-center" style="background:#fff; border-radius: 20px; border: 3px solid #008000;">
                             <div class="card-body py-5">
-                                <img src="https://www.demo.dernekweb.com/imgs/300x240x2/baskan_1.jpg" alt="Başkan" class="rounded-circle mb-4" style="width:170px; height:170px; object-fit:cover; border:6px solid #008000; box-shadow: 0 0 0 6px #e6f4ea;">
-                                <h4 class="card-title mb-1" style="font-weight:700;">Ahmet Yılmaz</h4>
+                                <img src="{{ asset('gorseller/' . $baskan->resim) }}" alt="Başkan" class="mb-4" style="width:250px; height:320px; object-fit:cover; border-radius: 12px; border:6px solid #008000; box-shadow: 0 0 0 6px #e6f4ea;">
+                                <h4 class="card-title mb-1" style="font-weight:700;">{{$baskan->ad_soyad}}</h4>
                                 <p class="card-subtitle mb-2 text-success" style="font-size:1.2rem; font-weight:600;">Yönetim Kurulu Başkanı</p>
                             </div>
                         </div>
@@ -91,55 +98,19 @@
                 </div>
                 <div class="row justify-content-center mt-4">
                     <!-- Üye 1 -->
+                    @foreach ($yonetimkurulu as $uye )
+
                     <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                         <div class="card shadow-lg border-0 h-100 text-center" style="border-radius: 18px; border: 2.5px solid #008000;">
                             <div class="card-body py-4">
-                                <img src="https://www.demo.dernekweb.com/imgs/300x240x2/baskan_1.jpg" alt="Üye 1" class="rounded-circle mb-3" style="width:120px; height:120px; object-fit:cover; border:4px solid #008000; box-shadow: 0 0 0 4px #e6f4ea;">
-                                <h5 class="card-title mb-1" style="font-weight:600;">Mehmet Demir</h5>
-                                <p class="card-subtitle text-muted" style="font-size:1.05rem; font-weight:500;">Başkan Yardımcısı</p>
+                                <img src="{{ asset('kurul/' . $uye->resim) }}" alt="Üye 1" class="mb-3" style="width:160px; height:220px; object-fit:cover; border-radius: 8px; border:4px solid #008000; box-shadow: 0 0 0 4px #e6f4ea;">
+                                <h5 class="card-title mb-1" style="font-weight:600;">{{$uye->adsoyad}}</h5>
+                                <p class="card-subtitle text-muted" style="font-size:1.05rem; font-weight:500;">{{$uye->statu}}</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Üye 2 -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="card shadow-lg border-0 h-100 text-center" style="border-radius: 18px; border: 2.5px solid #008000;">
-                            <div class="card-body py-4">
-                                <img src="https://www.demo.dernekweb.com/imgs/300x240x2/baskan_1.jpg" alt="Üye 2" class="rounded-circle mb-3" style="width:120px; height:120px; object-fit:cover; border:4px solid #008000; box-shadow: 0 0 0 4px #e6f4ea;">
-                                <h5 class="card-title mb-1" style="font-weight:600;">Ayşe Kaya</h5>
-                                <p class="card-subtitle text-muted" style="font-size:1.05rem; font-weight:500;">Genel Sekreter</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Üye 3 -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="card shadow-lg border-0 h-100 text-center" style="border-radius: 18px; border: 2.5px solid #008000;">
-                            <div class="card-body py-4">
-                                <img src="https://www.demo.dernekweb.com/imgs/300x240x2/baskan_1.jpg" alt="Üye 3" class="rounded-circle mb-3" style="width:120px; height:120px; object-fit:cover; border:4px solid #008000; box-shadow: 0 0 0 4px #e6f4ea;">
-                                <h5 class="card-title mb-1" style="font-weight:600;">Elif Çetin</h5>
-                                <p class="card-subtitle text-muted" style="font-size:1.05rem; font-weight:500;">Sayman</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Üye 4 -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="card shadow-lg border-0 h-100 text-center" style="border-radius: 18px; border: 2.5px solid #008000;">
-                            <div class="card-body py-4">
-                                <img src="https://www.demo.dernekweb.com/imgs/300x240x2/baskan_1.jpg" alt="Üye 4" class="rounded-circle mb-3" style="width:120px; height:120px; object-fit:cover; border:4px solid #008000; box-shadow: 0 0 0 4px #e6f4ea;">
-                                <h5 class="card-title mb-1" style="font-weight:600;">Burak Şahin</h5>
-                                <p class="card-subtitle text-muted" style="font-size:1.05rem; font-weight:500;">Üye</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Üye 5 -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="card shadow-lg border-0 h-100 text-center" style="border-radius: 18px; border: 2.5px solid #008000;">
-                            <div class="card-body py-4">
-                                <img src="https://www.demo.dernekweb.com/imgs/300x240x2/baskan_1.jpg" alt="Üye 5" class="rounded-circle mb-3" style="width:120px; height:120px; object-fit:cover; border:4px solid #008000; box-shadow: 0 0 0 4px #e6f4ea;">
-                                <h5 class="card-title mb-1" style="font-weight:600;">Zeynep Arslan</h5>
-                                <p class="card-subtitle text-muted" style="font-size:1.05rem; font-weight:500;">Üye</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
         </section>
@@ -158,7 +129,7 @@
                     <div class="col-md-4 text-center mb-4 mb-md-0 d-flex align-items-stretch">
                         <div class="w-100 d-flex align-items-stretch justify-content-center">
                             <img
-                                src="https://www.demo.dernekweb.com/imgs/300x300x2/baskan_1.jpg"
+                                src="{{ asset('gorseller/' . $baskan->resim) }}"
                                 alt="Başkan"
                                 style="width: 320px; height: 380px; object-fit: cover; border-radius: 18px; border: 4px solid #008000; box-shadow: 0 0 0 4px #e6f4ea; display: block; margin: auto;"
                             >
@@ -166,10 +137,10 @@
                     </div>
                     <div class="col-md-8 d-flex align-items-stretch">
                         <div class="p-4 w-100 d-flex flex-column justify-content-center" style="background: #fff; border-radius: 18px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); border-left: 5px solid #008000;">
-                            <h3 style="font-weight: 600; color: #222;">Mehmet Yılmaz</h3>
+                            <h3 style="font-weight: 600; color: #222;">{{$baskan->ad_soyad}}</h3>
                             <p style="font-size: 1.15rem; color: #444; line-height: 2;">
-                                Mehmet Yılmaz, 20 yılı aşkın süredir iş dünyasında liderlik yapmış, vizyoner bir yöneticidir. EGESİAD Yönetim Kurulu Başkanı olarak, derneğimizin gelişimine ve topluma katkı sağlamasına öncülük etmektedir.<br><br>
-                                Yenilikçi yaklaşımı, ekip çalışmasına verdiği önem ve etik değerlere bağlılığı ile tanınan Yılmaz, üyelerimizin ortak hedeflerine ulaşmasında ilham kaynağı olmaktadır. Başkanımız, sürdürülebilir büyüme ve toplumsal fayda odaklı projeleriyle EGESİAD'ın sektördeki saygın konumunu güçlendirmeye devam etmektedir.
+                                {!!$baskan->mesaj!!}
+
                             </p>
                         </div>
                     </div>
@@ -183,48 +154,7 @@
         <!-- End Counter here -->
 
         <!-- Start Contact Box here -->
-        <div class="back-contact-box back-contact-box-two">
-            <div class="container-fluid">
-                <div class="back-sec-title text-center mb-50 md-mb-30">
-                    <h2 class="back-title title-color mb-0">Bize Ulaşın</h2>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="contact-box">
-                            <span class="icon-part bg-phone">
-                                <a href="tel:+08807647866"><img src="assets/images/contact/phone.svg" alt="Phone Icon"></a>
-                            </span>
-                            <span class="text-part">
-                                <a href="tel:+08807647866">+(088) 076 478 66</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="contact-box">
-                            <span class="icon-part secondary-bg">
-                                <a href="mailto:support@kbiz.com"><img src="assets/images/contact/chat.svg" alt="Mail Icon"></a>
-                            </span>
-                            <span class="text-part">
-                                <a href="mailto:support@kbiz.com">support@kbiz.com</a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="contact-box">
-                            <span class="icon-part secondary-bg">
-                                <a href="https://goo.gl/maps/xyz" target="_blank"><img src="assets/images/contact/location.svg"></a>
-                            </span>
-                            <span class="text-part">
-                                <a href="https://goo.gl/maps/xyz" target="_blank">1234 Adres, Şehir, Ülke</a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-box-btn text-center mt-50 md-mt-30">
-                    <a href="contact.html" style="background-color: #008000; border:none; color:white;" class="back-btn success contact-btn">Bize Yazın</a>
-                </div>
-            </div>
-        </div>
+       @include('inc.igalani')
         <!-- End Contact Box here -->
 
     </div>

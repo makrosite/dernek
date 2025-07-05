@@ -1,6 +1,27 @@
 @extends('home-layout')
 @section('page')
 
+<!-- Back Breadcrumbs Start Here -->
+        <div class="back-breadcrumbs">
+            <div class="breadcrumbs-wrap">
+ @php
+    use App\Models\Ayarlar;
+    $resim = Ayarlar::find(1);
+    $bc = $resim->bc;
+@endphp
+                <img class="desktop" src="{{ asset('logo/' . $bc) }}" alt="Breadcrumbs Image" style="width:100%; height:430px; object-fit:cover; object-position:center;">
+                <img class="mobile" src="{{ asset('logo/' . $bc) }}" alt="Breadcrumbs Image" style="width:100%; height:230px; object-fit:cover; object-position:center;">
+
+                <div class="breadcrumbs-inner">
+                    <div class="container">
+                        <div class="breadcrumbs-text">
+                            <h1 class="breadcrumbs-title">Duyurular</h1>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 <div class="container py-5">
     <h1 class="mb-4">Duyurular</h1>
     <div class="row">
@@ -24,6 +45,6 @@
     </div>
 </div>
 
-
+  @include('inc.igalani')
 
 @endsection

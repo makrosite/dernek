@@ -29,16 +29,24 @@
 								<label for="exampleInputEmail1">İBAN</label>
 								<input name="iban"  type="text" class="form-control" id="exampleInputEmail1" >
 							</div>
-
-
-                            <div class="form-group">
-								<label for="exampleInputPassword1">Durum</label>
-                               <select name="durum"value="1" class="form-control" aria-label="Default select example">
+                             <div class="form-group">
+                                <label>Döviz Türü</label>
+                                <select name="doviz_turu" class="form-control">
+                                    <option value="TL">Türk Lirası ( ₺ )</option>
+                                    <option value="Euro">Euro ( € )</option>
+                                     <option value="USD">Dolar ( $ )</option>
+                                      <option value="Pound">Pound ( £ )</option>
+                                </select>
+                            </div>
+                             <div class="form-group">
+                                <label>Durum</label>
+                                <select name="durum" class="form-control">
                                     <option value="1">AKTİF</option>
                                     <option value="0">PASİF</option>
                                 </select>
+                            </div>
 
-                            <div class="form-group">
+							<div class="form-group">
 								<label for="exampleInputFile">Logo</label>
 								<input name="logo" type="file" id="exampleInputFile">
 
@@ -91,6 +99,7 @@ $ib = Bankalar::all();
                                         alt="duyuru Image" style="max-width:100%; height:auto;"></td>
                                     <td style="width:220px;">{{$i->bankaadi}}</td>
                                     <td style="width:850px;">{{$i->iban}}</td>
+                                    <td>{{$i->doviz_turu}}</td>
                                     <td>
 
                                         @if($i->durum ==1)

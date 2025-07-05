@@ -22,6 +22,7 @@ class BankalarController extends Controller
 
  $ekle = Bankalar::insert(["bankaadi"=> $request->bankaadi,
  "iban"=> $request->iban,
+ "doviz_turu"=> $request->doviz_turu,
  "durum"=> $request->durum,
  "logo"=> $resimadi,
  "created_at"=> now()]);

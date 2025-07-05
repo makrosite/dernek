@@ -113,14 +113,14 @@
 								<td>{{$b->aciklama}}</td>
 								<td>
                                     @php
-                                       $bankacek = Bankalar::where('id',$b->banka)->first();
-
-                                       echo $bankacek->bankaadi;
-
-
-
-
+                                        // Hata: $bankacek null olabilir, $bankacek->bankaadi erişimi hata verir.
+                                        $bankacek = \App\Models\Bankalar::where('id', $b->banka)->first();
                                     @endphp
+                                    @if($bankacek && $bankacek->bankaadi)
+                                        {{$bankacek->bankaadi}}
+                                    @else
+                                        banka Belirtilmedi
+                                    @endif
 
 
 

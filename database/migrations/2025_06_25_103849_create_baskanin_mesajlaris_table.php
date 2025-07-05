@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('baslik');
             $table->string('resim')->nullable();
             $table->longText('mesaj')->nullable();
+            $table->string('ad_soyad')->nullable();
+            $table->string('alt_baslik')->nullable();
             $table->timestamps();
         });
     }

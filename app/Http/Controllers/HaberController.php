@@ -162,8 +162,9 @@ $duyuru = Duyuru::where("id",$id)->first();
 
     public function etkinliksayfa(){
         $etkinlikler = Etkinlikler::orderBy('id','desc')->get();
-
+        // yorum
         return view('pages.etkinlikler',compact('etkinlikler'));
+
 
 
 

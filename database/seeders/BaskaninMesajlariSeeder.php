@@ -16,10 +16,12 @@ class BaskaninMesajlariSeeder extends Seeder
         \DB::table('baskanin_mesajlaris')->insert([
             [
               'menu_adi'=> 'Başkanın Mesajları',
-             'baslik'=> 'başkanımızdan Mesajlar',
-                'mesaj' => 'Değerli üyelerimiz, derneğimizin gelişimi için gösterdiğiniz katkılardan dolayı teşekkür ederim. Birlikte daha güzel yarınlara ulaşacağımıza inanıyorum.',
-                'created_at' => now(),
-                'updated_at' => now(),
+              'baslik'=> 'Başkanımızdan Mesajlar',
+              'ad_soyad' => 'Mehmet Yılmaz',
+              'alt_baslik' => 'Yönetim Kurulu Başkanı',
+              'mesaj' => 'Değerli üyelerimiz, derneğimizin gelişimi için gösterdiğiniz katkılardan dolayı teşekkür ederim. Birlikte daha güzel yarınlara ulaşacağımıza inanıyorum.',
+              'created_at' => now(),
+              'updated_at' => now(),
             ],
         ]);
     }

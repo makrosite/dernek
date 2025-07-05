@@ -21,23 +21,35 @@ class UyelerController extends Controller
 
     }
     public function eklepost(request $request){
-
-         $resimadi= rand(0,1000).".".$request->resim->getClientOriginalExtension();
-         $yukle = $request->resim->move(public_path("uyeler"), $resimadi);
-        $ekle= Uyeler::insert([
-            'firmaunvan'=> $request->firmaunvan,
-            'adsoyad'=> $request->adsoyad,
-            'telefon'=> $request->telefon,
-            'eposta'=> $request->eposta,
-            'hakkinda'=> $request->hakkinda,
-            'durum'=> $request->durum,
-            'resim'=>$resimadi,
-            'created_at'=>now()
+        $data = $request->validate([
+            'adi' => 'nullable|string',
+            'soyadi' => 'nullable|string',
+            'baba_adi' => 'nullable|string',
+            'anne_adi' => 'nullable|string',
+            'dogum_yeri' => 'nullable|string',
+            'dogum_tarihi' => 'nullable|date',
+            'tc_kimlik_no' => 'nullable|string|max:11',
+            'meslegi' => 'nullable|string',
+            'kan_grubu' => 'nullable|string',
+            'is_telefonu' => 'nullable|string',
+            'ev_telefonu' => 'nullable|string',
+            'cep_telefonu' => 'nullable|string',
+            'eposta' => 'nullable|string',
+            'nufusa_kayit_il_ilce_mahalle' => 'nullable|string',
+            'ikamet_adresi' => 'nullable|string',
+            'is_adresi' => 'nullable|string',
+            'ogrenim_durumu' => 'nullable|string',
+            'durum' => 0,
+            'firmaunvanı' => 'nullable|string',
+            'resim' => 'nullable|image',
         ]);
-        if($ekle){
-            return redirect()->route('uyelerpanel')->with('success', 'Üye Başarıyla Eklendi');
+        if($request->hasFile('resim')){
+            $resimadi= rand(0,1000).".".$request->resim->getClientOriginalExtension();
+            $request->resim->move(public_path("uyeler"), $resimadi);
+            $data['resim'] = $resimadi;
         }
-
+        Uyeler::create($data);
+        return redirect()->route('uyelerpanel')->with('success', 'Üye Başarıyla Eklendi');
     }
     public function uyeguncelle($id){
  $uye = Uyeler::find($id);
@@ -49,55 +61,39 @@ class UyelerController extends Controller
     }
 
     public function uyeguncellepost(request $request,$id){
- $uye = Uyeler::find($id);
-    $uyeResim = $uye->resim;
-    if(!$request->resim ==null){
-        File::delete(public_path('uyeler/'.$uyeResim));
-         $resimadi= rand(0,1000).".".$request->resim->getClientOriginalExtension();
-
-        // resim doluysa
-$guncelle= Uyeler::where('id',$id)->update([
-    'firmaunvan'=> $request->firmaunvan,
-    'adsoyad'=> $request->adsoyad,
-    'telefon'=> $request->telefon,
-    'eposta'=> $request->eposta,
-    'hakkinda'=> $request->hakkinda,
-     'resim'=>$resimadi,
-    'durum'=> $request->durum,]);
-
-    if($guncelle){
-          $yukle = $request->resim->move(public_path("uyeler"), $resimadi);
-
-            return redirect()->route('uyelerpanel')->with('success','Bilgiler Başarıyla Güncellendi');
-
-    }
-
-
-
-    }else{
-
-        $guncelle= Uyeler::where('id',$id)->update([
-    'firmaunvan'=> $request->firmaunvan,
-    'adsoyad'=> $request->adsoyad,
-    'telefon'=> $request->telefon,
-    'eposta'=> $request->eposta,
-    'hakkinda'=> $request->hakkinda,
-
-    'durum'=> $request->durum,]);
-
-    if($guncelle){
-
-
-            return redirect()->route('uyelerpanel')->with('success','Bilgiler Başarıyla Güncellendi');
-
-    }
-
-
-        // resim boş ise
-    }
-
-
-
+        $uye = Uyeler::find($id);
+        $data = $request->validate([
+            'adi' => 'nullable|string',
+            'soyadi' => 'nullable|string',
+            'baba_adi' => 'nullable|string',
+            'anne_adi' => 'nullable|string',
+            'dogum_yeri' => 'nullable|string',
+            'dogum_tarihi' => 'nullable|date',
+            'tc_kimlik_no' => 'nullable|string|max:11',
+            'meslegi' => 'nullable|string',
+            'kan_grubu' => 'nullable|string',
+            'is_telefonu' => 'nullable|string',
+            'ev_telefonu' => 'nullable|string',
+            'cep_telefonu' => 'nullable|string',
+            'eposta' => 'nullable|string',
+            'nufusa_kayit_il_ilce_mahalle' => 'nullable|string',
+            'ikamet_adresi' => 'nullable|string',
+            'is_adresi' => 'nullable|string',
+            'ogrenim_durumu' => 'nullable|string',
+            'durum' => 'nullable|integer',
+            'firmaunvanı' => 'nullable|string',
+            'resim' => 'nullable|image',
+        ]);
+        if($request->hasFile('resim')){
+            if($uye->resim && $uye->resim != 'resimyok.jpg'){
+                \Illuminate\Support\Facades\File::delete(public_path('uyeler/'.$uye->resim));
+            }
+            $resimadi= rand(0,1000).".".$request->resim->getClientOriginalExtension();
+            $request->resim->move(public_path("uyeler"), $resimadi);
+            $data['resim'] = $resimadi;
+        }
+        $uye->update($data);
+        return redirect()->route('uyelerpanel')->with('success','Bilgiler Başarıyla Güncellendi');
     }
 
 
@@ -130,6 +126,39 @@ $guncelle= Uyeler::where('id',$id)->update([
             return redirect()->route('uyelerpanel')->with('success','Başarıyla Güncellendi');
         }
 
+    }
+
+    // Üye Kayıt Formu (Kullanıcıdan gelen başvuru)
+    public function uyeKayitPost(Request $request)
+    {
+        $data = $request->validate([
+            'adi' => 'nullable|string',
+            'soyadi' => 'nullable|string',
+            'baba_adi' => 'nullable|string',
+            'anne_adi' => 'nullable|string',
+            'dogum_yeri' => 'nullable|string',
+            'dogum_tarihi' => 'nullable|date',
+            'tc_kimlik_no' => 'nullable|string|max:11',
+            'meslegi' => 'nullable|string',
+            'kan_grubu' => 'nullable|string',
+            'is_telefonu' => 'nullable|string',
+            'ev_telefonu' => 'nullable|string',
+            'cep_telefonu' => 'nullable|string',
+            'eposta' => 'nullable|string',
+            'nufusa_kayit_il_ilce_mahalle' => 'nullable|string',
+            'ikamet_adresi' => 'nullable|string',
+            'is_adresi' => 'nullable|string',
+            'ogrenim_durumu' => 'nullable|string',
+            'firmaunvanı' => 'nullable|string',
+            'resim' => 'nullable|image',
+        ]);
+        if ($request->hasFile('resim')) {
+            $resimadi = uniqid('uye_') . '.' . $request->file('resim')->getClientOriginalExtension();
+            $request->file('resim')->move(public_path('uyeler'), $resimadi);
+            $data['resim'] = $resimadi;
+        }
+        Uyeler::create($data);
+        return response()->json(['success' => true]);
     }
 
 }

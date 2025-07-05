@@ -1,4 +1,9 @@
 @php
+
+use App\Models\Isbirlikleri;
+ $firma = Isbirlikleri::all();
+
+
     // Kayma hızını ayarlamak için bir değişken oluşturun (1-10 arası, daha yüksek değer daha hızlı kayar)
     $kaymaHizi = 15; // Buradan hız ayarlanabilir
 @endphp
@@ -13,14 +18,13 @@
         </div>
         {{-- Kayan Logolar Bölümü --}}
         <marquee behavior="scroll" direction="left" scrollamount="{{ $kaymaHizi }}" style="height: 100px; line-height: 100px;">
+
+@foreach ($firma as $f )
+
+
             {{-- Örnek logo görselleri, daha sonra veritabanından çekilebilir --}}
-            <img src="https://www.kosgeb.gov.tr/Web/Content/assets/img/logo.png" alt="Müşteri Logosu 21" style="height: 70px; vertical-align: middle; margin: 0 40px; opacity: 0.8;">
-            <img src="https://www.kosgeb.gov.tr/Web/Content/assets/img/logo.png" alt="Müşteri Logosu 2" style="height: 70px; vertical-align: middle; margin: 0 40px; opacity: 0.8;">
-            <img src="https://www.kosgeb.gov.tr/Web/Content/assets/img/logo.png" alt="Müşteri Logosu 3" style="height: 70px; vertical-align: middle; margin: 0 40px; opacity: 0.8;">
-            <img src="https://www.kosgeb.gov.tr/Web/Content/assets/img/logo.png" alt="Müşteri Logosu 4" style="height: 70px; vertical-align: middle; margin: 0 40px; opacity: 0.8;">
-            <img src="https://www.kosgeb.gov.tr/Web/Content/assets/img/logo.png" alt="Müşteri Logosu 5" style="height: 70px; vertical-align: middle; margin: 0 40px; opacity: 0.8;">
-            <img src="https://www.kosgeb.gov.tr/Web/Content/assets/img/logo.png" alt="Müşteri Logosu 6" style="height: 70px; vertical-align: middle; margin: 0 40px; opacity: 0.8;">
-            <img src="https://www.kosgeb.gov.tr/Web/Content/assets/img/logo.png" alt="Müşteri Logosu 7" style="height: 70px; vertical-align: middle; margin: 0 40px; opacity: 0.8;">
+            <img src="{{ asset('isbirlikleri/' . $f->resim) }}" alt="Müşteri Logosu 21" style="height: 70px; vertical-align: middle; margin: 0 40px; opacity: 0.8;">
+       @endforeach
         </marquee>
     </div>
 </div>

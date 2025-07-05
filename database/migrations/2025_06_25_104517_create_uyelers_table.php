@@ -13,13 +13,26 @@ return new class extends Migration
     {
         Schema::create('uyelers', function (Blueprint $table) {
             $table->id();
-            $table->string('firmaunvan')->nullable();
-            $table->string('adsoyad')->nullable();
-            $table->string('telefon')->nullable();
+            $table->string('adi')->nullable();
+            $table->string('soyadi')->nullable();
+            $table->string('baba_adi')->nullable();
+            $table->string('anne_adi')->nullable();
+            $table->string('dogum_yeri')->nullable();
+            $table->date('dogum_tarihi')->nullable();
+            $table->string('tc_kimlik_no', 11)->nullable();
+            $table->string('meslegi')->nullable();
+            $table->string('kan_grubu')->nullable();
+            $table->string('is_telefonu')->nullable();
+            $table->string('ev_telefonu')->nullable();
+            $table->string('cep_telefonu')->nullable();
             $table->string('eposta')->nullable();
-            $table->string('hakkinda')->nullable();
-            $table->string('resim')->nullable();
+            $table->string('nufusa_kayit_il_ilce_mahalle')->nullable();
+            $table->text('ikamet_adresi')->nullable();
+            $table->text('is_adresi')->nullable();
+            $table->string('ogrenim_durumu')->nullable();
             $table->integer('durum')->default(1);
+            $table->string('firmaunvanı')->nullable();
+            $table->string('resim')->default('resimyok.jpg');
             $table->timestamps();
         });
     }

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('bankaadi');
             $table->string('iban');
+            $table->string('doviz_turu');
             $table->string('logo')->nullable();
             $table->integer('durum')->default(1);
             $table->timestamps();

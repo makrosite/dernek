@@ -1561,31 +1561,33 @@ body.search-expanded .searchbar-expanded {
   overflow: hidden;
 }
 .back-case-studies .single-case-studies .case-img:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: #1b2646;
-  transition: all 0.5s ease 0s;
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
 .back-case-studies .single-case-studies .case-img:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  min-width: 417px;
-  height: 200px;
-  right: 30px;
-  bottom: -30px;
-  background: url(assets/images/case/shape.png) no-repeat;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s ease 0s;
-  z-index: 1;
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+.back-case-studies .single-case-studies:hover .case-img:before {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+.back-case-studies .single-case-studies:hover .case-img:after {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
 }
 .back-case-studies .single-case-studies .case-img img {
-  mix-blend-mode: luminosity;
+    mix-blend-mode: normal !important;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 2/3;
+    border-radius: 8px;
 }
 .back-case-studies .single-case-studies:after {
   content: '';

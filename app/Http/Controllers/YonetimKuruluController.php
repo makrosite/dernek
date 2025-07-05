@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\File;
 class YonetimKuruluController extends Controller
 {
     public function index(){
-        // frotnend yönetim paneli kurul bilgilerini getiri
+        return view('pages.yonetim-kurulu');
     }
 
     public function panel(){

@@ -2,18 +2,19 @@
 @section('page')
                 <div class="back-breadcrumbs">
                     <div class="breadcrumbs-wrap">
-                        <img class="desktop" src="bc.jpg" alt="Breadcrumbs Image">
-                        <img class="mobile" src="assets/images/breadcrumbs/blog-banner-mobile.jpg" alt="Breadcrumbs Image">
+                         @php
+    use App\Models\Ayarlar;
+    $resim = Ayarlar::find(1);
+    $bc = $resim->bc;
+@endphp
+                <img class="desktop" src="{{ asset('logo/' . $bc) }}" alt="Breadcrumbs Image" style="width:100%; height:430px; object-fit:cover; object-position:center;">
+                <img class="mobile" src="{{ asset('logo/' . $bc) }}" alt="Breadcrumbs Image" style="width:100%; height:230px; object-fit:cover; object-position:center;">
+
                         <div class="breadcrumbs-inner">
                             <div class="container">
                                 <div class="breadcrumbs-text">
-                                    <h1 class="breadcrumbs-title">Blog Grid</h1>
-                                    <div class="back-nav">
-                                        <ul>
-                                            <li><a href="index.html">Home</a></li>
-                                            <li>Blog</li>
-                                        </ul>
-                                    </div>
+                                    <h1 class="breadcrumbs-title">Etkinlikler</h1>
+
                                 </div>
                             </div>
                         </div>
@@ -26,7 +27,9 @@
             @foreach($etkinlikler as $duyuru)
                 <div class="d-flex align-items-start mb-4 p-3 border rounded bg-white shadow-sm">
                     @if($duyuru->resim)
-                        <img src="{{ asset('etkinlik/' . $duyuru->resim) }}" alt="Duyuru Resmi" class="me-3" style="width:100px; height:100px; object-fit:cover; border-radius:8px;">
+                        <a href="{{ asset('etkinlik/' . $duyuru->resim) }}" data-fancybox="etkinlikler" data-caption="{{ $duyuru->baslik }}">
+                            <img class="etkinlikresim" src="{{ asset('etkinlik/' . $duyuru->resim) }}" alt="Duyuru Resmi" class="me-3" style="width:100px; height:100px; object-fit:cover; border-radius:8px;">
+                        </a>
                     @else
                         <div class="me-3" style="width:100px; height:100px; background:#eee; display:flex; align-items:center; justify-content:center; border-radius:8px;">
                             <span class="text-muted">Resim Yok</span>
@@ -44,6 +47,6 @@
 </div>
 <div style="height:150px;"></div>
 
-
+  @include('inc.igalani')
 
 @endsection

@@ -15,6 +15,6 @@ class Bankalar extends Model
 
 
     use HasFactory;
-    protected $fillable = ['bankaadi', 'iban', 'logo','durum','created_at'];
+    protected $fillable = ['bankaadi', 'iban', 'doviz_turu', 'logo','durum','created_at'];
     protected $table = 'bankalar';
 }

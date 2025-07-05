@@ -27,6 +27,14 @@
 								<label for="exampleInputEmail1">Başlık</label>
 								<input name="baslik" value="{{$baskan->baslik}}" type="text" class="form-control" id="exampleInputEmail1" >
 							</div>
+                            <div class="form-group">
+                                <label for="ad_soyad">Ad Soyad</label>
+                                <input name="ad_soyad" value="{{$baskan->ad_soyad}}" type="text" class="form-control" id="ad_soyad" >
+                            </div>
+                            <div class="form-group">
+                                <label for="alt_baslik">Alt Başlık</label>
+                                <input name="alt_baslik" value="{{$baskan->alt_baslik}}" type="text" class="form-control" id="alt_baslik" >
+                            </div>
 
 <div class="row">
                                 <div class="col-lg-6">

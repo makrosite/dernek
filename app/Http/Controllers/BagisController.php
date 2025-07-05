@@ -64,4 +64,31 @@ else {
 }
 
     }
+
+    // KAMUYA AÇIK BAĞIŞ FORMU KAYIT
+    public function store(Request $request)
+    {
+        \Log::info('Bagis formu POST verisi:', $request->all());
+        $request->validate([
+            'adsoyad' => 'required|string|max:255',
+            'banka' => 'required|integer',
+            'tutar' => 'required|numeric',
+            'aciklama' => 'nullable|string',
+        ]);
+
+        try {
+            Bagis::create([
+                'adsoyad' => $request->adsoyad ?? $request->ad_soyad,
+                'banka' => $request->banka,
+                'tutar' => $request->tutar,
+                'aciklama' => $request->aciklama,
+                'durum' => 2,
+            ]);
+        } catch (\Exception $e) {
+            \Log::error('Bagis kaydı hatası: ' . $e->getMessage());
+            return redirect()->route('bagis.yap')->with('error', 'Bir hata oluştu, lütfen tekrar deneyin.');
+        }
+
+        return redirect()->route('bagis.yap')->with('success', 'Bağışınız için teşekkür ederiz.');
+    }
 }

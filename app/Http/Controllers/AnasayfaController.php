@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\BaskaninMesajlari;
 
 class AnasayfaController extends Controller
 {
@@ -15,6 +16,8 @@ $veri =array
     "telefon"=> "55555 555 555",
     );
 
-return view("anasayfa",compact('veri'));
+$baskan = BaskaninMesajlari::where('id', 1)->first();
+
+return view("anasayfa",compact('veri','baskan'));
     }
 }

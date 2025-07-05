@@ -24,6 +24,8 @@ if(!$request->resim==null){
     $kaydet = BaskaninMesajlari::where('id',1)->update([
         'menu_adi'=> $request->menu_adi,
         'baslik'=> $request->baslik,
+        'ad_soyad'=> $request->ad_soyad,
+        'alt_baslik'=> $request->alt_baslik,
         'mesaj'=> $request->mesaj,
         'resim'=>$resimadi
 
@@ -39,6 +41,8 @@ if($kaydet){
        $kaydet = BaskaninMesajlari::where('id',1)->update([
         'menu_adi'=> $request->menu_adi,
         'baslik'=> $request->baslik,
+        'ad_soyad'=> $request->ad_soyad,
+        'alt_baslik'=> $request->alt_baslik,
         'mesaj'=> $request->mesaj,
 
        ]);

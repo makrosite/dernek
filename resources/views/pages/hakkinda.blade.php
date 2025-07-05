@@ -6,18 +6,18 @@
                 <!-- Back Breadcrumbs Start Here -->
                 <div class="back-breadcrumbs">
                     <div class="breadcrumbs-wrap">
-                        <img class="desktop" src="assets/images/breadcrumbs/banner-inner.jpg" alt="Breadcrumbs Image">
-                        <img class="mobile" src="assets/images/breadcrumbs/banner-inner-mobile.jpg" alt="Breadcrumbs Image">
+                         @php
+    use App\Models\Ayarlar;
+    $resim = Ayarlar::find(1);
+    $bc = $resim->bc;
+@endphp
+                <img class="desktop" src="{{ asset('logo/' . $bc) }}" alt="Breadcrumbs Image" style="width:100%; height:430px; object-fit:cover; object-position:center;">
+                <img class="mobile" src="{{ asset('logo/' . $bc) }}" alt="Breadcrumbs Image" style="width:100%; height:230px; object-fit:cover; object-position:center;">
+
                         <div class="breadcrumbs-inner">
                             <div class="container">
                                 <div class="breadcrumbs-text">
-                                    <h1 class="breadcrumbs-title">About Us</h1>
-                                    <div class="back-nav">
-                                        <ul>
-                                            <li><a href="index.html">Home</a></li>
-                                            <li>About Us</li>
-                                        </ul>
-                                    </div>
+                                    <h1 class="breadcrumbs-title">Hakkımızda</h1>
                                 </div>
                             </div>
                         </div>

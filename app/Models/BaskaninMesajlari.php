@@ -10,7 +10,7 @@ class BaskaninMesajlari extends Model
 
 
         protected $table = 'baskanin_mesajlaris';
-    protected $fillable = ['menu_adi', 'baslik', 'mesaj'];
+    protected $fillable = ['menu_adi', 'baslik', 'mesaj', 'resim', 'ad_soyad', 'alt_baslik'];
 
     use HasFactory;
 }

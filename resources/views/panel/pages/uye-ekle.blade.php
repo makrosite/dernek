@@ -14,55 +14,91 @@
 					<div class="card-content">
 						<form action="{{Route('uyeeklepost')}}" method="post" enctype="multipart/form-data">
                             @csrf
-
-							<div class="form-group">
-								<label for="exampleInputEmail1">Unvan</label>
-								<input name="firmaunvan"  type="text" class="form-control" id="exampleInputEmail1" >
-							</div>
-
                             <div class="form-group">
-								<label for="exampleInputEmail1">Yetkili Kişi</label>
-								<input name="adsoyad"  type="text" class="form-control" id="exampleInputEmail1" >
-							</div>
-
-                              <div class="form-group">
-								<label for="exampleInputEmail1">Telefon</label>
-								<input name="telefon"  type="text" class="form-control" id="exampleInputEmail1" >
-							</div>
-                            <div class="form-group">
-								<label for="exampleInputEmail1">E-Posta</label>
-								<input name="eposta"  type="text" class="form-control" id="exampleInputEmail1" >
-							</div>
-
-                               <div class="form-group">
-								<label for="exampleInputEmail1">Firma Hakkında</label>
-
-
-                                    <textarea class="form-control" name="hakkinda" id=""></textarea>
+                                <label>Adı</label>
+                                <input name="adi" type="text" class="form-control">
                             </div>
-
-
-
-
                             <div class="form-group">
-								<label for="exampleInputPassword1">Durum</label>
-                                <select name="durum"value="1" class="form-control" aria-label="Default select example">
+                                <label>Soyadı</label>
+                                <input name="soyadi" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Baba Adı</label>
+                                <input name="baba_adi" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Anne Adı</label>
+                                <input name="anne_adi" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Doğum Yeri</label>
+                                <input name="dogum_yeri" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Doğum Tarihi</label>
+                                <input name="dogum_tarihi" type="date" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>TC Kimlik No</label>
+                                <input name="tc_kimlik_no" type="text" maxlength="11" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Mesleği</label>
+                                <input name="meslegi" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Kan Grubu</label>
+                                <input name="kan_grubu" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>İş Telefonu</label>
+                                <input name="is_telefonu" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Ev Telefonu</label>
+                                <input name="ev_telefonu" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Cep Telefonu</label>
+                                <input name="cep_telefonu" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>E-Posta</label>
+                                <input name="eposta" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Nüfusa Kayıtlı Olduğu Yer</label>
+                                <input name="nufusa_kayit_il_ilce_mahalle" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>İkamet Adresi</label>
+                                <textarea name="ikamet_adresi" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>İş Adresi</label>
+                                <textarea name="is_adresi" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Öğrenim Durumu</label>
+                                <input name="ogrenim_durumu" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Firma Ünvanı</label>
+                                <input name="firmaunvanı" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Durum</label>
+                                <select name="durum" class="form-control">
                                     <option value="1">AKTİF</option>
                                     <option value="0">PASİF</option>
                                 </select>
-							</div>
-                          <div class="form-group">
-								<label for="exampleInputFile">Resim</label>
-								<input name="resim" type="file" id="exampleInputFile">
-
-							</div>
-
-
-
-
-
-							<button type="submit" class="btn btn-primary btn-sm waves-effect waves-light">KAYDET</button>
-
+                            </div>
+                            <div class="form-group">
+                                <label>Resim</label>
+                                <input name="resim" type="file" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm waves-effect waves-light">KAYDET</button>
+                        </form>
 					</div>
 					<!-- /.card-content -->
 				</div>
@@ -77,7 +113,6 @@
             </div>
 				<!-- /.box-content -->
 			</div>
-</form>
 
 
 @endsection

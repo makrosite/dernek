@@ -4,13 +4,15 @@
         <!-- meta tag -->
         <meta charset="utf-8">
  @php
-use App\Models\SiteAyar;
+use App\Models\Ayarlar;
 
-$site = SiteAyar::SiteAyar();
+$site = Ayarlar::find(1)
 
 @endphp
-        <title>{{$site->sitebasligi}}</title>
-        <meta name="description" content="">
+        <title>{{$site->baslik}}</title>
+        <meta name="description" content="{{$site->decs}}">
+        <meta name="keywords" content="{{$site->keywords}}">
+            <meta name="google-site-verification" content="{{$site->googleapi}}">
         <!-- responsive tag -->
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,6 +45,8 @@ $site = SiteAyar::SiteAyar();
 
 
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     </head>
     <body>
         <div class="back-search-overlay"></div>
@@ -64,7 +68,7 @@ $site = SiteAyar::SiteAyar();
         <!-- back wrapper Start Here -->
         @yield('page')
         <!-- back wrapper End Here -->
-
+        @include('inc.page-footer')
         <!-- Footer Start Here -->
         @include('inc.footer')
         <!-- Footer End Here-->
@@ -103,6 +107,12 @@ $site = SiteAyar::SiteAyar();
 		<!-- main js -->
         <script src="{{asset('assets/js/main.js')}}"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script>
+      $(document).ready(function() {
+        Fancybox.bind("[data-fancybox]", {});
+      });
+    </script>
 
     </body>
 </html>

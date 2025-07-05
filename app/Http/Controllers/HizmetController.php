@@ -45,17 +45,20 @@ class HizmetController extends Controller
 
     }
     public function durum($id){
-$veri = Hizmet::find($id);
-$durum = $veri->durum;
-if($durum == 1){
-    Hizmet::where('id', $id)->update(['durum'=>0]);
-    return redirect()->route('panelhizmet')->with('success','');
-}else{
-        Hizmet::where('id', $id)->update(['durum'=>1]);
-    return redirect()->route('panelhizmet')->with('success','');
+    $veri = Hizmet::find($id);
+    $durum = $veri->durum;
+    if($durum == 1){
+        Hizmet::where('id', $id)->update(['durum'=>0]);
+        return redirect()->route('panelhizmet')->with('success','');
+    }else{
+            Hizmet::where('id', $id)->update(['durum'=>1]);
+        return redirect()->route('panelhizmet')->with('success','');
 
-}
-
-
+        }
     }
+    public function hizmetdetay($id){
+        $hizmet= Hizmet::find($id);
+        return view('pages.hizmet-detay',compact('hizmet'));
+    }
+
 }

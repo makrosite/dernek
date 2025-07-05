@@ -26,13 +26,23 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+        $user = $request->user();
+        $validated = $request->validated();
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        // Kullanıcı adı değişiyorsa unique kontrolü
+        if ($user->username !== $validated['username']) {
+            $request->validate([
+                'username' => 'required|string|unique:users,username,' . $user->id,
+            ]);
         }
 
-        $request->user()->save();
+        $user->fill($validated);
+
+        if ($user->isDirty('email')) {
+            $user->email_verified_at = null;
+        }
+
+        $user->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
@@ -56,5 +66,25 @@ class ProfileController extends Controller
         $request->session()->regenerateToken();
 
         return Redirect::to('/');
+    }
+
+    public function yoneticiBilgileri()
+    {
+        return view('panel.pages.yonetici-bilgileri');
+    }
+
+    public function yoneticiBilgileriGuncelle(Request $request)
+    {
+        $user = $request->user();
+        $request->validate([
+            'username' => 'required|string|unique:users,username,' . $user->id,
+            'password' => 'nullable|string|min:6|confirmed',
+        ]);
+        $user->username = $request->username;
+        if ($request->filled('password')) {
+            $user->password = bcrypt($request->password);
+        }
+        $user->save();
+        return back()->with('status', 'Yönetici bilgileri güncellendi.');
     }
 }
